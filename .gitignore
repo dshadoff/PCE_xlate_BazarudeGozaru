@@ -1,0 +1,6 @@
+*~
+02_Extract_scripts/*.iso
+20_Extracted_graphics/*.txt
+90_Tools/*.o
+90_Tools/pce_gfx
+
