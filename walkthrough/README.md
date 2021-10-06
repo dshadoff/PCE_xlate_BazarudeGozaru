@@ -17,13 +17,39 @@ Area | Action 1 | Action 2 | Reward
 9 | Push | | 1 yen |
 10 | Tiptoe | Jump Right | 10 yen |
 
-### STAGE 2
-### STAGE 3
-### STAGE 4
-### STAGE 5
-### STAGE 6
-### STAGE 7
-### STAGE 8
-### STAGE 9
-### STAGE 10
+### STAGE 2 - Beach
+
+Area | Action 1 | Action 2 | Action 3 | Reward
+---- | -------- | -------- | -------- | ------
+1 | Spin | Jump right | | 1 yen |
+
+### STAGE 3 - Snow Country
+
+Area | Action 1 | Action 2 | Action 3 | Reward
+---- | -------- | -------- | -------- | ------
+
+### STAGE 4 - Graveyard
+
+Area | Action 1 | Action 2 | Action 3 | Action 4 | Reward
+---- | -------- | -------- | -------- | -------- | ------
+
+### STAGE 5 - Desert
+
+Area | Action 1 | Action 2 | Action 3 | Action 4 | Reward
+---- | -------- | -------- | -------- | -------- | ------
+
+### STAGE 6 - Amusement Park
+
+Area | Action 1 | Action 2 | Action 3 | Action 4 | Reward
+---- | -------- | -------- | -------- | -------- | ------
+
+### STAGE 7 - City
+
+Area | Action 1 | Action 2 | Action 3 | Action 4 | Reward
+---- | -------- | -------- | -------- | -------- | ------
+
+### STAGE 8 - Space
+
+Area | Action 1 | Action 2 | Action 3 | Action 4 | Reward
+---- | -------- | -------- | -------- | -------- | ------
 
