@@ -2,6 +2,9 @@
 
 ## WARNING !!  SPOILERS !!
 
+## Do Not Read Past This Point
+
+
 ### STAGE 1 - Mountain Road
 
 Area | Action 1 | Action 2 | Reward
