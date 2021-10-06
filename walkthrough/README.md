@@ -4,9 +4,11 @@
 
 ### STAGE 1 - Mountain Road
 
-| 1 | Jump right |
-| 2 | Tiptoe (get 1 yen) |
-| 3 | Jump right (get 1 yen) |
+| Area | Action 1 | Action 2 | Reward |
+| ---- | -------- | -------- | ------ |
+| 1 | Jump right | | |
+| 2 | Tiptoe | | 1 yen |
+| 3 | Jump right | | 1 yen |
 | 4 | |
 | 5 | |
 | 6 | |
