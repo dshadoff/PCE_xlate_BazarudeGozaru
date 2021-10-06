@@ -42,7 +42,7 @@
 
 Area | Action 1 | Action 2 | Reward
 ---- | -------- | -------- | ------
-1 | Jump right | | |
+1 | Jump Right | | |
 2 | Tiptoe | | 1 yen |
 3 | Jump Right | | 1 yen |
 4 | Somersault| | 1 yen |
@@ -57,7 +57,16 @@ Area | Action 1 | Action 2 | Reward
 
 Area | Action 1 | Action 2 | Action 3 | Reward
 ---- | -------- | -------- | -------- | ------
-1 | Spin | Jump right | | 1 yen |
+1 | Spin | Jump Right | | 1 yen |
+2 | Walk Right | Jump Right | | 1 yen |
+3 | Jump Right | Jump Left | | 1 yen (times 3) |
+4 | Tiptoe | Jump Right | | 1 yen |
+5 | Tiptoe | Walk Right | | 1 yen |
+6 | Push | Dance | Jump Right | 1 yen (times 2) |
+7 | Walk Right | Spin | | 1 yen |
+8 | Push | Jump Right | | 1 yen (times 2) |
+9 | Push | Jump Right | Jump Right | 10 yen + 1 yen |
+10 | Walk Right | Jump Left | Jump Right | 10 yen + 1 yen |
 
 ### STAGE 3 - Snow Country
 
