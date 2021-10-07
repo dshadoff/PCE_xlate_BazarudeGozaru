@@ -72,6 +72,16 @@ Area | Action 1 | Action 2 | Action 3 | Reward
 
 Area | Action 1 | Action 2 | Action 3 | Reward
 ---- | -------- | -------- | -------- | ------
+1 | Spin | | | 1 yen |
+2 | Tiptoe | | | 1 yen |
+3 | Walk Right | Walk Right | Jump Right | 1 yen |
+4 | Jump Right | Jump Right | Jump Left | 1 yen (times 2) |
+5 | Jump Right | Jump Right | | 1 yen |
+6 | Walk Right | Spin | | 1 yen |
+7 | Tiptoe | Walk Left | | 1 yen |
+8 | Push | Jump Right | | 10 yen + 1 yen |
+9 | Spin | Jump Right | | 10 yen |
+10 | Walk Right | Spin | | 10 yen |
 
 ### STAGE 4 - Graveyard
 
