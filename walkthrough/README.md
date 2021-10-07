@@ -87,6 +87,16 @@ Area | Action 1 | Action 2 | Action 3 | Reward
 
 Area | Action 1 | Action 2 | Action 3 | Action 4 | Reward
 ---- | -------- | -------- | -------- | -------- | ------
+1 | Don't Look | | | | 1 yen |
+2 | Sit | Sit | Somersault | | 1 yen |
+3 | Push | Jump Left | Walk Right | Jump right | 10 yen |
+4 | Sit | Jump Left | Jump Right | | 1 yen |
+5 | Jump Left | Jump Right | | | 1 yen |
+6 | Jump Right | Sit | Jump Right | Jump right | 1 yen |
+7 | Somersault | Walk Right | Jump Right | | 1 yen |
+8 | Walk Right | Spin | Jump Right | | 10 yen |
+9 | Don't Look | Walk Left | Walk Left | Jump Left | 10 yen |
+9 | Walk Right | | | | 10 yen |
 
 ### STAGE 5 - Desert
 
