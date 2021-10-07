@@ -107,6 +107,11 @@ Area | Action 1 | Action 2 | Action 3 | Action 4 | Reward
 3 | Push | Jump Right | Walk Left | Push | 1 yen |
 4 | Walk Right | Jump Right | Push | | 1 yen |
 5 | Walk Right | Walk Right | Kossack Dance | | 10 yen |
+6 | Push | Walk Left | Push | | 10 yen |
+7 | Spin | Walk Left | Push | Jump Left | 10 yen + 1 yen |
+8 | Kossack Dance | Spin | Walk Left | | 10 yen |
+9 | Don't Look | Walk Left | Walk Right | | 1 yen |
+10 | Walk Right | Walk Right | Spin | Jump Right | 10 yen |
 
 ### STAGE 6 - Amusement Park
 
