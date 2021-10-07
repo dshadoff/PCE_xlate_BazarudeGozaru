@@ -89,10 +89,10 @@ Area | Action 1 | Action 2 | Action 3 | Action 4 | Reward
 ---- | -------- | -------- | -------- | -------- | ------
 1 | Don't Look | | | | 1 yen |
 2 | Sit | Sit | Somersault | | 1 yen |
-3 | Push | Jump Left | Walk Right | Jump right | 10 yen |
+3 | Push | Jump Left | Walk Right | Jump Right | 10 yen |
 4 | Sit | Jump Left | Jump Right | | 1 yen |
 5 | Jump Left | Jump Right | | | 1 yen |
-6 | Jump Right | Sit | Jump Right | Jump right | 1 yen |
+6 | Jump Right | Sit | Jump Right | Jump Right | 1 yen |
 7 | Somersault | Walk Right | Jump Right | | 1 yen |
 8 | Walk Right | Spin | Jump Right | | 10 yen |
 9 | Don't Look | Walk Left | Walk Left | Jump Left | 10 yen |
@@ -102,6 +102,11 @@ Area | Action 1 | Action 2 | Action 3 | Action 4 | Reward
 
 Area | Action 1 | Action 2 | Action 3 | Action 4 | Reward
 ---- | -------- | -------- | -------- | -------- | ------
+1 | Push | Jump Right | | | 1 yen |
+2 | Jump Right | Jump Right | Jump Left | | 1 yen |
+3 | Push | Jump Right | Walk Left | Push | 1 yen |
+4 | Walk Right | Jump Right | Push | | 1 yen |
+5 | Walk Right | Walk Right | Kossack Dance | | 10 yen |
 
 ### STAGE 6 - Amusement Park
 
