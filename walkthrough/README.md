@@ -96,7 +96,7 @@ Area | Action 1 | Action 2 | Action 3 | Action 4 | Reward
 7 | Somersault | Walk Right | Jump Right | | 1 yen |
 8 | Walk Right | Spin | Jump Right | | 10 yen |
 9 | Don't Look | Walk Left | Walk Left | Jump Left | 10 yen |
-9 | Walk Right | | | | 10 yen |
+10 | Walk Right | | | | 10 yen |
 
 ### STAGE 5 - Desert
 
