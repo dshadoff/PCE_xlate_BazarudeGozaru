@@ -117,6 +117,11 @@ Area | Action 1 | Action 2 | Action 3 | Action 4 | Reward
 
 Area | Action 1 | Action 2 | Action 3 | Action 4 | Reward
 ---- | -------- | -------- | -------- | -------- | ------
+1 | Jump Right | Spin | Jump Right | | 1 yen |
+2 | Walk Right | Walk Right | Jump Right | | 1 yen |
+3 | Push | Jump Right | Walk Left | | 1 yen |
+4 | Walk Left | Jump Right | Walk Right | | 1 yen |
+5 | Jump Right | Jump Left | | | 10 yen |
 
 ### STAGE 7 - City
 
