@@ -147,4 +147,14 @@ Area | Action 1 | Action 2 | Action 3 | Action 4 | Reward
 
 Area | Action 1 | Action 2 | Action 3 | Action 4 | Reward
 ---- | -------- | -------- | -------- | -------- | ------
+1 | Moonwalk | | | | 10 yen |
+2 | Walk Right | Walk Right | Sit | Jump Left | 10 yen |
+3 | Walk Right | Walk Right | Somersault | Jump Left | 10 yen |
+4 | Jump Left | Jump Right | Kossack Dance | Sit | 10 yen |
+5 | Walk Left | Walk Left | Walk Right | Walk Right | 10 yen |
+6 | Skip | Jump Left | Moonwalk | Jump Right | 10 yen (times 2) |
+7 | Jump Left | Walk Right | Walk Left | | 1 yen |
+8 | Walk Right | Somersault | Somersault | | 10 yen |
+9 | Walk Right | | | | 10 yen |
+10 | Walk Right | Walk Right | Jump Right | | 10 yen |
 
