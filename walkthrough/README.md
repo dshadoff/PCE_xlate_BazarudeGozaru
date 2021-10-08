@@ -122,6 +122,11 @@ Area | Action 1 | Action 2 | Action 3 | Action 4 | Reward
 3 | Push | Jump Right | Walk Left | | 1 yen |
 4 | Walk Left | Jump Right | Walk Right | | 1 yen |
 5 | Jump Right | Jump Left | | | 10 yen |
+6 | Skip | Somersault | Jump Left | Jump Right | 10 yen + 1 yen |
+7 | Jump Left | Walk Right | Walk Left | Jump Right | 10 yen + 1 yen |
+8 | Push | Jump Left | Walk Right | Kossack Dance | 1 yen |
+9 | Walk Left | Walk Right | Walk Right | | 10 yen |
+10 | Jump Right | | | | |
 
 ### STAGE 7 - City
 
