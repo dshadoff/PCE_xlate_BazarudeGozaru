@@ -132,6 +132,13 @@ Area | Action 1 | Action 2 | Action 3 | Action 4 | Reward
 
 Area | Action 1 | Action 2 | Action 3 | Action 4 | Reward
 ---- | -------- | -------- | -------- | -------- | ------
+1 | Jump Right | Spin | Walk Left | Walk Left | 10 yen + 1 yen |
+2 | Somersault | Somersault | Jump Left | Walk Left | 10 yen |
+3 | Walk Right | Walk Left | Jump Right | Walk Left | 10 yen |
+4 | Jump Right | Jump Left | Walk Right | Walk Right | 1 yen |
+5 | Somersault | Jump Right | Jump Right | Walk Left | 1 yen |
+6 | Walk Right | Jump Right | Walk Left | Jump Right | 10 yen + 1 yen |
+7 | Jump Right | Jump Left | Walk Right | | 10 yen |
 
 ### STAGE 8 - Space
 
