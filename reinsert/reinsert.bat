@@ -51,6 +51,31 @@
 ..\tools\pce_gfx put tile track2.bin 0x024C500 16 4 2 24C500.new 0 0 ..\xlate\24C180.xlate
 ::
 :: GOAL signs for Stage 4
+..\tools\pce_gfx put tile track2.bin 0x0259840 16 4 4 259840.new 0 0 ..\xlate\259840.xlate
+:: Note: Sign has two additional alternate bottoms which need to be adjusted too
+..\tools\pce_gfx put tile track2.bin 0x02598C0 16 4 2 2598C0.new 0 0 ..\xlate\259840.xlate
+..\tools\pce_gfx put tile track2.bin 0x0259D40 16 4 2 259D40.new 0 0 ..\xlate\259840.xlate
+::
+:: GOAL signs for Stage 5
+..\tools\pce_gfx put tile track2.bin 0x0267040 16 4 4 267040.new 0 0 ..\xlate\259840.xlate
+:: Note: Sign has three additional alternate bottoms which need to be adjusted too
+..\tools\pce_gfx put tile track2.bin 0x0266C80 16 4 2 266C80.new 0 0 ..\xlate\259840.xlate
+..\tools\pce_gfx put tile track2.bin 0x0266E00 16 4 1 266E00.new 0 0 ..\xlate\259840.xlate
+..\tools\pce_gfx put tile track2.bin 0x0266A80 16 4 1 266A80.new 0 0 ..\xlate\259840.xlate
+::
+:: GOAL signs for Stage 6
+..\tools\pce_gfx put tile track2.bin 0x0276580 16 4 4 276580.new 0 0 ..\xlate\276580.xlate
+::
+:: GOAL signs for Stage 7
+..\tools\pce_gfx put tile track2.bin 0x0284B80 16 4 4 284B80.new 0 0 ..\xlate\284B80.xlate
+:: Note: Sign has three additional alternate bottoms which need to be adjusted too
+..\tools\pce_gfx put tile track2.bin 0x0283880 16 4 2 283880.new 0 0 ..\xlate\284B80.xlate
+..\tools\pce_gfx put tile track2.bin 0x0283F00 16 4 1 283F00.new 0 0 ..\xlate\284B80.xlate
+..\tools\pce_gfx put tile track2.bin 0x0284700 16 4 2 284700.new 0 0 ..\xlate\284B80.xlate
+::
+:: GOAL signs for Stage 8
+..\tools\pce_gfx put tile track2.bin 0x029A100 16 4 4 29A100.new 0 0 ..\xlate\29A100.xlate
+
 
 
 ::

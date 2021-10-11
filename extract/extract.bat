@@ -121,14 +121,38 @@ pce_gfx get sprite track2.bin 0x0185400 2 2 2 183C00.orig 96 0 ..\xlate\183800.x
 ..\tools\pce_gfx get tile track2.bin 0x0236400 16 4 2 236400.orig 0 0 ..\xlate\236800.xlate
 ..\tools\pce_gfx get tile track2.bin 0x0236CC0 16 4 2 236CC0.orig 0 0 ..\xlate\236800.xlate
 ::
-:: GOAL signs for Stage 3
+:: GOAL signs for Stage 3 (translated)
 ..\tools\pce_gfx get tile track2.bin 0x024C180 16 4 4 24C180.orig 0 0 ..\xlate\24C180.xlate
-:: Note: Sign has two additional alternate bottoms which need to be adjusted too
+:: Note: Sign has two additional alternate bottoms which need to be adjusted too (translated)
 ..\tools\pce_gfx get tile track2.bin 0x024B800 16 4 2 24B800.orig 0 0 ..\xlate\24C180.xlate
 ..\tools\pce_gfx get tile track2.bin 0x024C500 16 4 2 24C500.orig 0 0 ..\xlate\24C180.xlate
 ::
-:: GOAL signs for Stage 4
-
+:: GOAL signs for Stage 4 (translated)
+..\tools\pce_gfx get tile track2.bin 0x0259840 16 4 4 259840.orig 0 0 ..\xlate\259840.xlate
+:: Note: Sign has two additional alternate bottoms which need to be adjusted too (translated)
+..\tools\pce_gfx get tile track2.bin 0x02598C0 16 4 2 2598C0.orig 0 0 ..\xlate\259840.xlate
+..\tools\pce_gfx get tile track2.bin 0x0259D40 16 4 2 259D40.orig 0 0 ..\xlate\259840.xlate
+::
+:: GOAL signs for Stage 5 (translated)
+..\tools\pce_gfx get tile track2.bin 0x0267040 16 4 4 267040.orig 0 0 ..\xlate\259840.xlate
+:: Note: Sign has three additional alternate bottoms which need to be adjusted too (translated)
+..\tools\pce_gfx get tile track2.bin 0x0266C80 16 4 2 266C80.orig 0 0 ..\xlate\259840.xlate
+..\tools\pce_gfx get tile track2.bin 0x0266E00 16 4 1 266E00.orig 0 0 ..\xlate\259840.xlate
+..\tools\pce_gfx get tile track2.bin 0x0266A80 16 4 1 266A80.orig 0 0 ..\xlate\259840.xlate
+::
+:: GOAL signs for Stage 6 (translated)
+..\tools\pce_gfx get tile track2.bin 0x0276580 16 4 4 276580.orig 0 0 ..\xlate\276580.xlate
+::
+:: GOAL signs for Stage 7 (translated)
+..\tools\pce_gfx get tile track2.bin 0x0284B80 16 4 4 284B80.orig 0 0 ..\xlate\284B80.xlate
+:: Note: Sign has three additional alternate bottoms which need to be adjusted too (translated)
+..\tools\pce_gfx get tile track2.bin 0x0283880 16 4 2 283880.orig 0 0 ..\xlate\284B80.xlate
+..\tools\pce_gfx get tile track2.bin 0x0283F00 16 4 1 283F00.orig 0 0 ..\xlate\284B80.xlate
+..\tools\pce_gfx get tile track2.bin 0x0284700 16 4 2 284700.orig 0 0 ..\xlate\284B80.xlate
+::
+:: GOAL signs for Stage 8 (translated)
+..\tools\pce_gfx get tile track2.bin 0x029A100 16 4 4 29A100.orig 0 0 ..\xlate\29A100.xlate
+::
 
 ::
 :::: Purchases at the store:
@@ -244,14 +268,6 @@ pce_gfx get sprite track2.bin 0x0185400 2 2 2 183C00.orig 96 0 ..\xlate\183800.x
 ..\tools\pce_gfx get tile track2.bin 0x02A9800 16 4 4 2A9800.orig 0 0 ..\xlate\2A9800.xlate
 ..\tools\pce_gfx get tile track2.bin 0x0231800 16 4 4 231800.orig 0 0 ..\xlate\0DA000.xlate
 ::
-::
-:: This is a pair of GOAL signs which are the same except for translation key
-..\tools\pce_gfx get tile track2.bin 0x0267040 16 4 4 267040.orig 0 0 ..\xlate\259840.xlate
-..\tools\pce_gfx get tile track2.bin 0x0284B80 16 4 4 284B80.orig 0 0 ..\xlate\284B80.xlate
-::
-:: These have marginal differences from above (plus translation key):
-..\tools\pce_gfx get tile track2.bin 0x0259840 16 4 4 259840.orig 0 0 ..\xlate\259840.xlate
-..\tools\pce_gfx get tile track2.bin 0x029A100 16 4 4 29A100.orig 0 0 ..\xlate\29A100.xlate
 
 
 ..\tools\pce_gfx get sprite track2.bin 0x00A0C00 2 2 2 0A0C00.orig 0 0 ..\xlate\0A0C00.xlate
