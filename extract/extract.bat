@@ -107,24 +107,33 @@ pce_gfx get sprite track2.bin 0x0185400 2 2 2 183C00.orig 96 0 ..\xlate\183800.x
 :: Action choices (translated)
 ..\tools\pce_gfx get sprite track2.bin 0x0111400 2 2 4 111400.orig 0 0 ..\xlate\114000.xlate
 ::
-:: These are the monkey icons
+:: These are the monkey icons (half-completed)
 ..\tools\pce_gfx get sprite track2.bin 0x0151000 2 2 16 151000.orig 0 0 ..\xlate\19B800.xlate
 ..\tools\pce_gfx get sprite track2.bin 0x0152000 2 2 16 152000.orig 0 0 ..\xlate\19B800.xlate
 ..\tools\pce_gfx get sprite track2.bin 0x019B800 2 2 16 19B800.orig 0 0 ..\xlate\19B800.xlate
 ..\tools\pce_gfx get sprite track2.bin 0x019C800 2 2 16 19C800.orig 0 0 ..\xlate\19B800.xlate
 ::
-:: This is a pair of GOAL signs which are the same except for translation key
-:: Note: Sign has two additional altenrate bottoms which need to be adjusted too
+:: GOAL signs for Stages 1 & 2
+:: These GOAL signs are are the same except for translation key (translated)
 ..\tools\pce_gfx get tile track2.bin 0x0236800 16 4 4 236800.orig 0 0 ..\xlate\236800.xlate
+..\tools\pce_gfx get tile track2.bin 0x0241040 16 4 4 241040.orig 0 0 ..\xlate\241040.xlate
+:: Note: Sign has two additional alternate bottoms which need to be adjusted too (translated)
 ..\tools\pce_gfx get tile track2.bin 0x0236400 16 4 2 236400.orig 0 0 ..\xlate\236800.xlate
 ..\tools\pce_gfx get tile track2.bin 0x0236CC0 16 4 2 236CC0.orig 0 0 ..\xlate\236800.xlate
-..\tools\pce_gfx get tile track2.bin 0x0241040 16 4 4 241040.orig 0 0 ..\xlate\241040.xlate
+::
+:: GOAL signs for Stage 3
+..\tools\pce_gfx get tile track2.bin 0x024C180 16 4 4 24C180.orig 0 0 ..\xlate\24C180.xlate
+:: Note: Sign has two additional alternate bottoms which need to be adjusted too
+..\tools\pce_gfx get tile track2.bin 0x024B800 16 4 2 24B800.orig 0 0 ..\xlate\24C180.xlate
+..\tools\pce_gfx get tile track2.bin 0x024C500 16 4 2 24C500.orig 0 0 ..\xlate\24C180.xlate
+::
+:: GOAL signs for Stage 4
 
 
 ::
 :::: Purchases at the store:
 ::
-:: Store choices - Buy/Don't Buy
+:: Store choices - Buy/Don't Buy (translated)
 ..\tools\pce_gfx get sprite track2.bin 0x0166800 2 2 2 166800.orig 0 0 ..\xlate\166800.xlate
 ..\tools\pce_gfx get sprite track2.bin 0x0167000 2 2 2 166800.orig 32 0 ..\xlate\166800.xlate
 ..\tools\pce_gfx get sprite track2.bin 0x0167800 2 2 2 166800.orig 64 0 ..\xlate\166800.xlate
@@ -133,10 +142,10 @@ pce_gfx get sprite track2.bin 0x0185400 2 2 2 183C00.orig 96 0 ..\xlate\183800.x
 ..\tools\pce_gfx get sprite track2.bin 0x0167200 2 2 2 166800.orig 160 0 ..\xlate\166800.xlate
 ..\tools\pce_gfx get sprite track2.bin 0x0167A00 2 2 2 166800.orig 192 0 ..\xlate\166800.xlate
 
-:: Wallet (contents)
+:: Wallet (contents) (translated)
 ..\tools\pce_gfx get tile track2.bin 0x01DA100 16 4 1 1DA100.orig 0 0 ..\xlate\17C000.xlate
 
-::Note: These are all the same: ** yen sign ** / Dollar Sign
+::Note: These are all the same: ** yen sign ** / Dollar Sign (translated)
 ..\tools\pce_gfx get tile track2.bin 0x01DC4C0 16 2 2 1DC4C0.orig 0 0 ..\xlate\17C000.xlate
 ..\tools\pce_gfx get tile track2.bin 0x01DF4C0 16 2 2 1DF4C0.orig 0 0 ..\xlate\17C000.xlate
 ..\tools\pce_gfx get tile track2.bin 0x01E24C0 16 2 2 1E24C0.orig 0 0 ..\xlate\17C000.xlate
@@ -241,7 +250,6 @@ pce_gfx get sprite track2.bin 0x0185400 2 2 2 183C00.orig 96 0 ..\xlate\183800.x
 ..\tools\pce_gfx get tile track2.bin 0x0284B80 16 4 4 284B80.orig 0 0 ..\xlate\284B80.xlate
 ::
 :: These have marginal differences from above (plus translation key):
-..\tools\pce_gfx get tile track2.bin 0x024C180 16 4 4 24C180.orig 0 0 ..\xlate\24C180.xlate
 ..\tools\pce_gfx get tile track2.bin 0x0259840 16 4 4 259840.orig 0 0 ..\xlate\259840.xlate
 ..\tools\pce_gfx get tile track2.bin 0x029A100 16 4 4 29A100.orig 0 0 ..\xlate\29A100.xlate
 
