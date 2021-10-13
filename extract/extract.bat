@@ -1,34 +1,39 @@
 :::: Title Screen:
 ::
 :: Bazaru de Gozaru no
-pce_gfx get tile track2.bin 0x0172800 16 16 10 172800.orig 0 0 ..\xlate\172800.xlate
+..\tools\pce_gfx get tile track2.bin 0x0172800 16 16 10 172800.orig 0 0 ..\xlate\172800.xlate
 ::
 :: Game de Gozaru
-pce_gfx get sprite track2.bin 0x0177800 2 2 4 177800.orig 0 0 ..\xlate\177800.xlate
-pce_gfx get sprite track2.bin 0x0178000 2 2 4 177800.orig 32 0 ..\xlate\177800.xlate
-pce_gfx get sprite track2.bin 0x0178800 2 2 4 177800.orig 64 0 ..\xlate\177800.xlate
-pce_gfx get sprite track2.bin 0x0179000 2 2 4 177800.orig 96 0 ..\xlate\177800.xlate
+..\tools\pce_gfx get sprite track2.bin 0x0177800 2 2 4 177800.orig 0 0 ..\xlate\177800.xlate
+..\tools\pce_gfx get sprite track2.bin 0x0178000 2 2 4 177800.orig 32 0 ..\xlate\177800.xlate
+..\tools\pce_gfx get sprite track2.bin 0x0178800 2 2 4 177800.orig 64 0 ..\xlate\177800.xlate
+..\tools\pce_gfx get sprite track2.bin 0x0179000 2 2 4 177800.orig 96 0 ..\xlate\177800.xlate
 ::
 :: Run button wo Osu de Gozaru (translated)
-pce_gfx get tile track2.bin 0x0174840 16 14 2 174840.orig 0 0 ..\xlate\174840.xlate
+..\tools\pce_gfx get tile track2.bin 0x0174840 16 14 2 174840.orig 0 0 ..\xlate\174840.xlate
 
 ::
 :::: CHOOSE FILE SCREEN
 ::
 :: File wo Erabu de Gozaru
-pce_gfx get tile track2.bin 0x0181C00 16 16 8 181C00.orig 0 0 ..\xlate\181C00.xlate
+..\tools\pce_gfx get tile track2.bin 0x0181C00 16 16 8 181C00.orig 0 0 ..\xlate\181C00.xlate
 ::
 :: File, Stage/Round (translated)
-pce_gfx get sprite track2.bin 0x0183800 2 2 2 183800.orig 0 0 ..\xlate\183800.xlate
-pce_gfx get sprite track2.bin 0x0184000 2 2 2 183800.orig 32 0 ..\xlate\183800.xlate
-pce_gfx get sprite track2.bin 0x0184800 2 2 2 183800.orig 64 0 ..\xlate\183800.xlate
-pce_gfx get sprite track2.bin 0x0185000 2 2 2 183800.orig 96 0 ..\xlate\183800.xlate
+..\tools\pce_gfx get sprite track2.bin 0x0183800 2 2 2 183800.orig 0 0 ..\xlate\183800.xlate
+..\tools\pce_gfx get sprite track2.bin 0x0184000 2 2 2 183800.orig 32 0 ..\xlate\183800.xlate
+..\tools\pce_gfx get sprite track2.bin 0x0184800 2 2 2 183800.orig 64 0 ..\xlate\183800.xlate
+..\tools\pce_gfx get sprite track2.bin 0x0185000 2 2 2 183800.orig 96 0 ..\xlate\183800.xlate
 ::
 :: Data ga nai
-pce_gfx get sprite track2.bin 0x0183C00 2 2 2 183C00.orig 0 0 ..\xlate\183800.xlate
-pce_gfx get sprite track2.bin 0x0184400 2 2 2 183C00.orig 32 0 ..\xlate\183800.xlate
-pce_gfx get sprite track2.bin 0x0184C00 2 2 2 183C00.orig 64 0 ..\xlate\183800.xlate
-pce_gfx get sprite track2.bin 0x0185400 2 2 2 183C00.orig 96 0 ..\xlate\183800.xlate
+..\tools\pce_gfx get sprite track2.bin 0x0183800 2 2 2 183C00.orig 0 0 ..\xlate\183800.xlate
+..\tools\pce_gfx get sprite track2.bin 0x0183C80 1 1 1 183C00.orig 32 0 ..\xlate\183800.xlate
+..\tools\pce_gfx get sprite track2.bin 0x0183D80 1 1 1 183C00.orig 32 16 ..\xlate\183800.xlate
+..\tools\pce_gfx get sprite track2.bin 0x0184400 2 2 2 183C00.orig 48 0 ..\xlate\183800.xlate
+..\tools\pce_gfx get sprite track2.bin 0x0184C00 2 2 2 183C00.orig 80 0 ..\xlate\183800.xlate
+..\tools\pce_gfx get sprite track2.bin 0x0184680 1 1 1 183C00.orig 64 32 ..\xlate\183800.xlate
+..\tools\pce_gfx get sprite track2.bin 0x0184E00 2 2 1 183C00.orig 80 32 ..\xlate\183800.xlate
+..\tools\pce_gfx get sprite track2.bin 0x0185080 2 1 2 183C00.orig 112 0 ..\xlate\183800.xlate
+..\tools\pce_gfx get sprite track2.bin 0x0185180 1 1 1 183C00.orig 112 32 ..\xlate\183800.xlate
 
 
 :::: WORLD MAP
@@ -112,6 +117,11 @@ pce_gfx get sprite track2.bin 0x0185400 2 2 2 183C00.orig 96 0 ..\xlate\183800.x
 ..\tools\pce_gfx get sprite track2.bin 0x0152000 2 2 16 152000.orig 0 0 ..\xlate\19B800.xlate
 ..\tools\pce_gfx get sprite track2.bin 0x019B800 2 2 16 19B800.orig 0 0 ..\xlate\19B800.xlate
 ..\tools\pce_gfx get sprite track2.bin 0x019C800 2 2 16 19C800.orig 0 0 ..\xlate\19B800.xlate
+::
+:: 10-yen moneybag
+..\tools\pce_gfx get sprite track2.bin 0x0153400 2 2 2 153400.orig 0 0 ..\xlate\0B6180.xlate
+:: 1-yen moneybag
+..\tools\pce_gfx get sprite track2.bin 0x0153B00 2 1 1 153B00.orig 0 0 ..\xlate\0B6180.xlate
 ::
 :: GOAL signs for Stages 1 & 2
 :: These GOAL signs are are the same except for translation key (translated)
@@ -285,8 +295,6 @@ pce_gfx get sprite track2.bin 0x0185400 2 2 2 183C00.orig 96 0 ..\xlate\183800.x
 ..\tools\pce_gfx get sprite track2.bin 0x011D800 2 2 6 11D800.orig 0 0 ..\xlate\117000.xlate
 ..\tools\pce_gfx get sprite track2.bin 0x011E000 2 2 6 11E000.orig 0 0 ..\xlate\117000.xlate
 ..\tools\pce_gfx get sprite track2.bin 0x011E800 2 2 6 11E800.orig 0 0 ..\xlate\117000.xlate
-..\tools\pce_gfx get sprite track2.bin 0x0153400 2 2 2 153400.orig 0 0 ..\xlate\0B6180.xlate
-..\tools\pce_gfx get sprite track2.bin 0x0153B00 2 1 1 153B00.orig 0 0 ..\xlate\0B6180.xlate
 ..\tools\pce_gfx get sprite track2.bin 0x0157A00 2 2 6 157A00.orig 0 0 ..\xlate\157A00.xlate
 ..\tools\pce_gfx get sprite track2.bin 0x0158200 2 2 6 158200.orig 0 0 ..\xlate\157A00.xlate
 
