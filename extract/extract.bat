@@ -34,6 +34,10 @@
 ..\tools\pce_gfx get sprite track2.bin 0x0184E00 2 2 1 183C00.orig 80 32 ..\xlate\183800.xlate
 ..\tools\pce_gfx get sprite track2.bin 0x0185080 2 1 2 183C00.orig 112 0 ..\xlate\183800.xlate
 ..\tools\pce_gfx get sprite track2.bin 0x0185180 1 1 1 183C00.orig 112 32 ..\xlate\183800.xlate
+::
+:: Ko (money units)
+..\tools\pce_gfx get tile track2.bin 0x01829E0 1 1 1 1829E0.orig 0 0 ..\xlate\1829E0.xlate
+..\tools\pce_gfx get tile track2.bin 0x0182BE0 1 1 1 1829E0.orig 0 8 ..\xlate\1829E0.xlate
 
 
 :::: WORLD MAP
