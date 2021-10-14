@@ -8,7 +8,6 @@
 ## Choose Files screen
 
 - File wo erabu de Gozaru Heading
-- Data ga nai de gozaru
 
 ## World Map
 
@@ -38,6 +37,7 @@
   - Moonwalk: 15200, 198800
   - Sakadachi (handstand): 15200, 198800
   - Kossack Dance 19C800, 15200
+- Scrolling "Win"/"Lose" banners
 
 ## Shop
 

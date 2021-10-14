@@ -12,6 +12,17 @@
 ..\tools\pce_gfx put sprite track2.bin 0x0184800 2 2 2 183800.new 64 0 ..\xlate\183800.xlate
 ..\tools\pce_gfx put sprite track2.bin 0x0185000 2 2 2 183800.new 96 0 ..\xlate\183800.xlate
 ::
+:: Data ga nai
+..\tools\pce_gfx put sprite track2.bin 0x0183800 2 2 2 183C00.new 0 0 ..\xlate\183800.xlate
+..\tools\pce_gfx put sprite track2.bin 0x0183C80 1 1 1 183C00.new 32 0 ..\xlate\183800.xlate
+..\tools\pce_gfx put sprite track2.bin 0x0183D80 1 1 1 183C00.new 32 16 ..\xlate\183800.xlate
+..\tools\pce_gfx put sprite track2.bin 0x0184400 2 2 2 183C00.new 48 0 ..\xlate\183800.xlate
+..\tools\pce_gfx put sprite track2.bin 0x0184C00 2 2 2 183C00.new 80 0 ..\xlate\183800.xlate
+..\tools\pce_gfx put sprite track2.bin 0x0184680 1 1 1 183C00.new 64 32 ..\xlate\183800.xlate
+..\tools\pce_gfx put sprite track2.bin 0x0184E00 2 2 1 183C00.new 80 32 ..\xlate\183800.xlate
+..\tools\pce_gfx put sprite track2.bin 0x0185080 2 1 2 183C00.new 112 0 ..\xlate\183800.xlate
+..\tools\pce_gfx put sprite track2.bin 0x0185180 1 1 1 183C00.new 112 32 ..\xlate\183800.xlate
+::
 :: Ko (money units)
 ..\tools\pce_gfx put tile track2.bin 0x01829E0 1 1 1 1829E0.new 0 0 ..\xlate\1829E0.xlate
 ..\tools\pce_gfx put tile track2.bin 0x0182BE0 1 1 1 1829E0.new 0 8 ..\xlate\1829E0.xlate
