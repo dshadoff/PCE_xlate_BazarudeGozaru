@@ -2,16 +2,17 @@
 
 ## Title Screen
 
-- Bazaru de Gozaru ("Bazaru de Gozaru's")
-- Game de gozaru ("Puzzle Game")
+- Bazaru de Gozaru ("Bazaru de Gozaru's")  (172800)
+- Game de gozaru ("Game" -> "Puzzle Game") (177800)
 
 ## Choose Files screen
 
+- Backup RAM full (16900)
 - File wo erabu de Gozaru Heading
 
 ## World Map
 
-- Stage Select Heading
+- Stage Select Heading (162800)
 - Stage & Round
 
 ## AREA Map
@@ -72,6 +73,17 @@ There is a list of strings on disk for these phrases:
 ## Help Screens
 
 - Everything
+Screen 1 190C00 & 192880 & 193000: 
+- Icon wo erabi bazaru wo
+- Goal made tsurete ikou!
+- Point goto ni Icon doori no
+- Action de Bazaru ga ugoku!
+- koudo wo kimetara ato wa
+- miteru dake. Umaku iku kana ?
+- rimocon wo tsukatte tokushuu na
+- play mo tanoshimeru!
+Screen 2 : 
+Screen 3 :
 
 ## Bazaru's House Heading
 
