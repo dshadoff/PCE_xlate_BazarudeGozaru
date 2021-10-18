@@ -32,8 +32,6 @@
 ## IN-GAME
 
 - 10 yen bag (153400.orig)
-- Action choices:
-  - Kossack Dance 19C800, 15200
 - Scrolling "Win"/"Lose" banners
 
 ## Shop
