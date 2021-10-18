@@ -116,7 +116,7 @@
 :: Action choices (translated)
 ..\tools\pce_gfx get sprite track2.bin 0x0111400 2 2 4 111400.orig 0 0 ..\xlate\114000.xlate
 ::
-:: These are the monkey icons (half-completed)
+:: These are the monkey icons (mostly-completed)
 ..\tools\pce_gfx get sprite track2.bin 0x0151000 2 2 16 151000.orig 0 0 ..\xlate\19B800.xlate
 ..\tools\pce_gfx get sprite track2.bin 0x0152000 2 2 16 152000.orig 0 0 ..\xlate\19B800.xlate
 ..\tools\pce_gfx get sprite track2.bin 0x019B800 2 2 16 19B800.orig 0 0 ..\xlate\19B800.xlate
