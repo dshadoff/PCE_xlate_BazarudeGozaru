@@ -5,5 +5,6 @@ extract/track2.bin
 extract/*.orig
 reinsert/*.iso
 reinsert/track2.bin
+reinsert/*.orig
 tools/*.o
 

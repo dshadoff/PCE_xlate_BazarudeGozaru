@@ -31,7 +31,6 @@
 
 ## IN-GAME
 
-- 1 yen bag (153B00.orig)
 - 10 yen bag (153400.orig)
 - Action choices:
   - Minai (Blind): 15200, 198800
