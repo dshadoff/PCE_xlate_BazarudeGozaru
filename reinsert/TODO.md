@@ -33,7 +33,6 @@
 
 - 10 yen bag (153400.orig)
 - Action choices:
-  - Sakadachi (handstand): 15200, 19B800
   - Kossack Dance 19C800, 15200
 - Scrolling "Win"/"Lose" banners
 
