@@ -33,9 +33,9 @@
 
 - 10 yen bag (153400.orig)
 - Action choices:
-  - Minai (Blind): 15200, 198800
-  - Moonwalk: 15200, 198800
-  - Sakadachi (handstand): 15200, 198800
+  - Minai (Blind): 15200, 19B800
+  - Moonwalk: 15200, 19B800
+  - Sakadachi (handstand): 15200, 19B800
   - Kossack Dance 19C800, 15200
 - Scrolling "Win"/"Lose" banners
 
