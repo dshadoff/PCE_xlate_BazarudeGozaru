@@ -52,6 +52,11 @@
 ..\tools\pce_gfx put sprite track2.bin 0x019B800 2 2 16 19B800.new 0 0 ..\xlate\19B800.xlate
 ..\tools\pce_gfx put sprite track2.bin 0x019C800 2 2 16 19C800.new 0 0 ..\xlate\19B800.xlate
 ::
+:: 10-yen moneybag
+::..\tools\pce_gfx put sprite track2.bin 0x0153400 2 2 2 153400.new 0 0 ..\xlate\0B6180.xlate
+:: 1-yen moneybag
+..\tools\pce_gfx put sprite track2.bin 0x0153B00 2 1 1 153B00.new 0 0 ..\xlate\0B6180.xlate
+::
 :: GOAL signs for Stages 1 & 2
 :: These GOAL signs are the same except for translation key (use 236800 for both since they are identical)
 ..\tools\pce_gfx put tile track2.bin 0x0236800 16 4 4 236800.new 0 0 ..\xlate\236800.xlate
