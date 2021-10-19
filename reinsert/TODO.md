@@ -1,5 +1,9 @@
 # TO DO for insert:
 
+## Wrong System Card
+- There is no "wrong system card" screen for this Super CD-ROM, oddly
+  It simply goes to a black screen and stays there (on real hardware; Mednafen eventually goes back to the boot screen)
+
 ## Title Screen
 
 - Bazaru de Gozaru ("Bazaru de Gozaru's")  (172800)
@@ -76,10 +80,13 @@ Screen 1 190C00 & 192880 & 193000:
 - miteru dake. Umaku iku kana ?
 - rimocon wo tsukatte tokushuu na
 - play mo tanoshimeru!
+
 Screen 2 : 
 Screen 3 :
 
-## Bazaru's House Heading
+## Bazaru's House
+
+- Heading
 
 
 ## Miscellaneous
