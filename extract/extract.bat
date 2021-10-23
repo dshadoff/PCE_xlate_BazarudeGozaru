@@ -24,7 +24,7 @@
 ..\tools\pce_gfx get sprite track2.bin 0x0184800 2 2 2 183800.orig 64 0 ..\xlate\183800.xlate
 ..\tools\pce_gfx get sprite track2.bin 0x0185000 2 2 2 183800.orig 96 0 ..\xlate\183800.xlate
 ::
-:: Data ga nai
+:: Data ga nai (translated)
 ..\tools\pce_gfx get sprite track2.bin 0x0183800 2 2 2 183C00.orig 0 0 ..\xlate\183800.xlate
 ..\tools\pce_gfx get sprite track2.bin 0x0183C80 1 1 1 183C00.orig 32 0 ..\xlate\183800.xlate
 ..\tools\pce_gfx get sprite track2.bin 0x0183D80 1 1 1 183C00.orig 32 16 ..\xlate\183800.xlate
@@ -35,7 +35,7 @@
 ..\tools\pce_gfx get sprite track2.bin 0x0185080 2 1 2 183C00.orig 112 0 ..\xlate\183800.xlate
 ..\tools\pce_gfx get sprite track2.bin 0x0185180 1 1 1 183C00.orig 112 32 ..\xlate\183800.xlate
 ::
-:: Ko (money units)
+:: Ko (money units) (translated)
 ..\tools\pce_gfx get tile track2.bin 0x01829E0 1 1 1 1829E0.orig 0 0 ..\xlate\1829E0.xlate
 ..\tools\pce_gfx get tile track2.bin 0x0182BE0 1 1 1 1829E0.orig 0 8 ..\xlate\1829E0.xlate
 
@@ -58,8 +58,26 @@
 :: Asobi kata (translated)
 ..\tools\pce_gfx get tile track2.bin 0x01A1400 16 6 4 1A1400.orig 0 0 ..\xlate\1A1400.xlate
 
-:::: AREA MAP
 
+:::: HELP
+::
+:: "Asobi kata" page heading
+..\tools\pce_gfx get tile track2.bin 0x017D400 16 14 4 17D400.orig 0 0 ..\xlate\169000.xlate
+::
+::Controller
+..\tools\pce_gfx get tile track2.bin 0x017C000 16 16 10 17C000.orig 0 0 ..\xlate\17C000.xlate
+::
+::How to Play initial screen
+..\tools\pce_gfx get tile track2.bin 0x0190C00 16 16 8 190C00.orig 0 0 ..\xlate\17C000.xlate
+..\tools\pce_gfx get tile track2.bin 0x0192880 16 4 4 192880.orig 0 0 ..\xlate\17C000.xlate
+..\tools\pce_gfx get tile track2.bin 0x0193000 16 16 6 193000.orig 0 0 ..\xlate\17C000.xlate
+::
+:: Alphabets for icon explanation screens
+..\tools\pce_gfx get tile track2.bin 0x0195000 16 16 16 195000.orig 0 0 ..\xlate\195000.xlate
+..\tools\pce_gfx get tile track2.bin 0x0197000 16 16 14 197000.orig 0 0 ..\xlate\195000.xlate
+
+
+:::: AREA MAP
 ::
 ::Note: These are all the same - "World map ni Modoru"/"Return to World Map"
 ::Note: reinsertion only requires one image be translated
@@ -116,7 +134,7 @@
 :: Action choices (translated)
 ..\tools\pce_gfx get sprite track2.bin 0x0111400 2 2 4 111400.orig 0 0 ..\xlate\114000.xlate
 ::
-:: These are the monkey icons (mostly-completed)
+:: These are the monkey icons (translated)
 ..\tools\pce_gfx get sprite track2.bin 0x0151000 2 2 16 151000.orig 0 0 ..\xlate\19B800.xlate
 ..\tools\pce_gfx get sprite track2.bin 0x0152000 2 2 16 152000.orig 0 0 ..\xlate\19B800.xlate
 ..\tools\pce_gfx get sprite track2.bin 0x019B800 2 2 16 19B800.orig 0 0 ..\xlate\19B800.xlate
@@ -124,7 +142,7 @@
 ::
 :: 10-yen moneybag
 ..\tools\pce_gfx get sprite track2.bin 0x0153400 2 2 2 153400.orig 0 0 ..\xlate\0B6180.xlate
-:: 1-yen moneybag
+:: 1-yen moneybag (translated)
 ..\tools\pce_gfx get sprite track2.bin 0x0153B00 2 1 1 153B00.orig 0 0 ..\xlate\0B6180.xlate
 ::
 :: GOAL signs for Stages 1 & 2
@@ -179,10 +197,10 @@
 ..\tools\pce_gfx get sprite track2.bin 0x0166A00 2 2 2 166800.orig 128 0 ..\xlate\166800.xlate
 ..\tools\pce_gfx get sprite track2.bin 0x0167200 2 2 2 166800.orig 160 0 ..\xlate\166800.xlate
 ..\tools\pce_gfx get sprite track2.bin 0x0167A00 2 2 2 166800.orig 192 0 ..\xlate\166800.xlate
-
+::
 :: Wallet (contents) (translated)
 ..\tools\pce_gfx get tile track2.bin 0x01DA100 16 4 1 1DA100.orig 0 0 ..\xlate\17C000.xlate
-
+::
 ::Note: These are all the same: ** yen sign ** / Dollar Sign (translated)
 ..\tools\pce_gfx get tile track2.bin 0x01DC4C0 16 2 2 1DC4C0.orig 0 0 ..\xlate\17C000.xlate
 ..\tools\pce_gfx get tile track2.bin 0x01DF4C0 16 2 2 1DF4C0.orig 0 0 ..\xlate\17C000.xlate
@@ -192,10 +210,12 @@
 ..\tools\pce_gfx get tile track2.bin 0x01EB4C0 16 2 2 1EB4C0.orig 0 0 ..\xlate\17C000.xlate
 ..\tools\pce_gfx get tile track2.bin 0x01EE4C0 16 2 2 1EE4C0.orig 0 0 ..\xlate\17C000.xlate
 ..\tools\pce_gfx get tile track2.bin 0x01F14C0 16 2 2 1F14C0.orig 0 0 ..\xlate\17C000.xlate
-
-
 ::
-:::: Bazaru's house
+:: Alphabet for conversation with shop owner
+..\tools\pce_gfx get tile track2.bin 0x01F4000 16 16 14 1F4000.orig 0 0 ..\xlate\17C000.xlate
+
+
+:::: Bazaru's house screen heading
 ::
 ..\tools\pce_gfx get tile track2.bin 0x01F7000 16 16 4 1F7000.orig 0 0 ..\xlate\1F7000.xlate
 ..\tools\pce_gfx get tile track2.bin 0x020B040 16 12 10 20B040.orig 0 0 ..\xlate\20B040.xlate
@@ -223,14 +243,10 @@
 
 :: Backup File message
 ..\tools\pce_gfx get tile track2.bin 0x0169000 16 16 14 169000.orig 0 0 ..\xlate\169000.xlate
-..\tools\pce_gfx get tile track2.bin 0x017C000 16 16 10 17C000.orig 0 0 ..\xlate\17C000.xlate
 
 :: "Onegai"
 ..\tools\pce_gfx get tile track2.bin 0x016BD40 16 4 4 16BD40.orig 0 0 ..\xlate\169000.xlate
 
-
-:: "Asobi kata"
-..\tools\pce_gfx get tile track2.bin 0x017D400 16 14 4 17D400.orig 0 0 ..\xlate\169000.xlate
 
 :: Yen bag
 ..\tools\pce_gfx get tile track2.bin 0x01803C0 16 2 2 1803C0.orig 0 0 ..\xlate\1803C0.xlate
@@ -246,14 +262,6 @@
 
 ..\tools\pce_gfx get tile track2.bin 0x018B020 16 16 12 18B020.orig 0 0 ..\xlate\18B020.xlate
 
-..\tools\pce_gfx get tile track2.bin 0x0190C00 16 16 8 190C00.orig 0 0 ..\xlate\17C000.xlate
-..\tools\pce_gfx get tile track2.bin 0x0192880 16 4 4 192880.orig 0 0 ..\xlate\17C000.xlate
-..\tools\pce_gfx get tile track2.bin 0x0193000 16 16 6 193000.orig 0 0 ..\xlate\17C000.xlate
-
-::Note: 195000 and 197000 are substantially similar
-..\tools\pce_gfx get tile track2.bin 0x0195000 16 16 16 195000.orig 0 0 ..\xlate\195000.xlate
-..\tools\pce_gfx get tile track2.bin 0x0197000 16 16 14 197000.orig 0 0 ..\xlate\195000.xlate
-
 
 
 
@@ -262,8 +270,6 @@
 :: Note: These are discontiguous, but may be connected
 ..\tools\pce_gfx get tile track2.bin 0x01D2020 16 7 2 1D2020.orig 0 0 ..\xlate\1D2020.xlate
 ..\tools\pce_gfx get tile track2.bin 0x01D2980 16 4 2 1D2980.orig 0 0 ..\xlate\1D2020.xlate
-
-..\tools\pce_gfx get tile track2.bin 0x01F4000 16 16 14 1F4000.orig 0 0 ..\xlate\17C000.xlate
 
 ..\tools\pce_gfx get tile track2.bin 0x0213000 16 16 16 213000.orig 0 0 ..\xlate\213000.xlate
 ..\tools\pce_gfx get tile track2.bin 0x0215000 16 14 2 215000.orig 0 0 ..\xlate\215000.xlate
