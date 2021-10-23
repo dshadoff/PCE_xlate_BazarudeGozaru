@@ -45,7 +45,7 @@ Area | Action 1 | Action 2 | Reward
 1 | Jump Right | | |
 2 | Tiptoe | | 1 yen |
 3 | Jump Right | | 1 yen |
-4 | Somersault| | 1 yen |
+4 | Roll| | 1 yen |
 5 | Jump Right | | 1 yen |
 6 | Walk Left | | 1 yen |
 7 | Walk Right | | 1 yen |
@@ -87,15 +87,15 @@ Area | Action 1 | Action 2 | Action 3 | Reward
 
 Area | Action 1 | Action 2 | Action 3 | Action 4 | Reward
 ---- | -------- | -------- | -------- | -------- | ------
-1 | Don't Look | | | | 1 yen |
-2 | Sit | Sit | Somersault | | 1 yen |
+1 | Blind | | | | 1 yen |
+2 | Sit | Sit | Roll | | 1 yen |
 3 | Push | Jump Left | Walk Right | Jump Right | 10 yen |
 4 | Sit | Jump Left | Jump Right | | 1 yen |
 5 | Jump Left | Jump Right | | | 1 yen |
 6 | Jump Right | Sit | Jump Right | Jump Right | 1 yen |
-7 | Somersault | Walk Right | Jump Right | | 1 yen |
+7 | Roll | Walk Right | Jump Right | | 1 yen |
 8 | Walk Right | Spin | Jump Right | | 10 yen |
-9 | Don't Look | Walk Left | Walk Left | Jump Left | 10 yen |
+9 | Blind | Walk Left | Walk Left | Jump Left | 10 yen |
 10 | Walk Right | | | | 10 yen |
 
 ### STAGE 5 - Desert
@@ -106,11 +106,11 @@ Area | Action 1 | Action 2 | Action 3 | Action 4 | Reward
 2 | Jump Right | Jump Right | Jump Left | | 1 yen |
 3 | Push | Jump Right | Walk Left | Push | 1 yen |
 4 | Walk Right | Jump Right | Push | | 1 yen |
-5 | Walk Right | Walk Right | Kossack Dance | | 10 yen |
+5 | Walk Right | Walk Right | Hopak Dance | | 10 yen |
 6 | Push | Walk Left | Push | | 10 yen |
 7 | Spin | Walk Left | Push | Jump Left | 10 yen + 1 yen |
-8 | Kossack Dance | Spin | Walk Left | | 10 yen |
-9 | Don't Look | Walk Left | Walk Right | | 1 yen |
+8 | Hopak Dance | Spin | Walk Left | | 10 yen |
+9 | Blind | Walk Left | Walk Right | | 1 yen |
 10 | Walk Right | Walk Right | Spin | Jump Right | 10 yen |
 
 ### STAGE 6 - Amusement Park
@@ -122,9 +122,9 @@ Area | Action 1 | Action 2 | Action 3 | Action 4 | Reward
 3 | Push | Jump Right | Walk Left | | 1 yen |
 4 | Walk Left | Jump Right | Walk Right | | 1 yen |
 5 | Jump Right | Jump Left | | | 10 yen |
-6 | Skip | Somersault | Jump Left | Jump Right | 10 yen + 1 yen |
+6 | Skip | Roll | Jump Left | Jump Right | 10 yen + 1 yen |
 7 | Jump Left | Walk Right | Walk Left | Jump Right | 10 yen + 1 yen |
-8 | Push | Jump Left | Walk Right | Kossack Dance | 1 yen |
+8 | Push | Jump Left | Walk Right | Hopak Dance | 1 yen |
 9 | Walk Left | Walk Right | Walk Right | | 10 yen |
 10 | Jump Right | | | | |
 
@@ -133,10 +133,10 @@ Area | Action 1 | Action 2 | Action 3 | Action 4 | Reward
 Area | Action 1 | Action 2 | Action 3 | Action 4 | Reward
 ---- | -------- | -------- | -------- | -------- | ------
 1 | Jump Right | Spin | Walk Left | Walk Left | 10 yen + 1 yen |
-2 | Somersault | Somersault | Jump Left | Walk Left | 10 yen |
+2 | Roll | Roll | Jump Left | Walk Left | 10 yen |
 3 | Walk Right | Walk Left | Jump Right | Walk Left | 10 yen |
 4 | Jump Right | Jump Left | Walk Right | Walk Right | 1 yen |
-5 | Somersault | Jump Right | Jump Right | Walk Left | 1 yen |
+5 | Roll | Jump Right | Jump Right | Walk Left | 1 yen |
 6 | Walk Right | Jump Right | Walk Left | Jump Right | 10 yen + 1 yen |
 7 | Jump Right | Jump Left | Walk Right | | 10 yen |
 8 | Jump Left | Tiptoe | | | 1 yen |
@@ -149,12 +149,12 @@ Area | Action 1 | Action 2 | Action 3 | Action 4 | Reward
 ---- | -------- | -------- | -------- | -------- | ------
 1 | Moonwalk | | | | 10 yen |
 2 | Walk Right | Walk Right | Sit | Jump Left | 10 yen |
-3 | Walk Right | Walk Right | Somersault | Jump Left | 10 yen |
-4 | Jump Left | Jump Right | Kossack Dance | Sit | 10 yen |
+3 | Walk Right | Walk Right | Roll | Jump Left | 10 yen |
+4 | Jump Left | Jump Right | Hopak Dance | Sit | 10 yen |
 5 | Walk Left | Walk Left | Walk Right | Walk Right | 10 yen |
 6 | Skip | Jump Left | Moonwalk | Jump Right | 10 yen (times 2) |
 7 | Jump Left | Walk Right | Walk Left | | 1 yen |
-8 | Walk Right | Somersault | Somersault | | 10 yen |
+8 | Walk Right | Roll | Roll | | 10 yen |
 9 | Walk Right | | | | 10 yen |
 10 | Walk Right | Walk Right | Jump Right | | 10 yen |
 
