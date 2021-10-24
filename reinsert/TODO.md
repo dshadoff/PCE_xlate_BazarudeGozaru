@@ -26,8 +26,8 @@
 - Level Names:
   - Yamamichi  (TRAIL ?  HIKE ?)
   - Sunahama (BEACH)
-  - Yukiguni (Ice world)
-  - Hakaba (Graveyard)
+  - Yukiguni (Ice world / Arctic)
+  - Hakaba (Cemetery)
   - Sabaku (DESERT)
   - Yuuenchi (Amusement Park / Carnival)
   - Tokai (CITY)
@@ -71,15 +71,7 @@ There is a list of strings on disk for these phrases:
 ## Help Screens
 
 - Everything
-Screen 1 190C00 & 192880 & 193000: 
-- Icon wo erabi bazaru wo
-- Goal made tsurete ikou!
-- Point goto ni Icon doori no
-- Action de Bazaru ga ugoku!
-- koudo wo kimetara ato wa
-- miteru dake. Umaku iku kana ?
-- rimocon wo tsukatte tokushuu na
-- play mo tanoshimeru!
+Screen 1 190C00 & 192880 & 193000 - done
 
 Screen 2 : 
 Screen 3 :

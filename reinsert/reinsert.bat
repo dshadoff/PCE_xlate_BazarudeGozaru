@@ -33,6 +33,15 @@
 :: Asobi kata
 ..\tools\pce_gfx put tile track2.bin 0x01A1400 16 6 4 1A1400.new 0 0 ..\xlate\1A1400.xlate
 
+ 
+:::: HELP
+::
+::How to Play initial screen
+..\tools\pce_gfx put tile track2.bin 0x0190C00 16 16 8 190C00.new 0 0 ..\xlate\17C000.xlate
+..\tools\pce_gfx put tile track2.bin 0x0192880 16 4 4 192880.new 0 0 ..\xlate\17C000.xlate
+..\tools\pce_gfx put tile track2.bin 0x0193000 16 16 6 193000.new 0 0 ..\xlate\17C000.xlate
+
+
 ::
 :::: AREA MAP
 ::

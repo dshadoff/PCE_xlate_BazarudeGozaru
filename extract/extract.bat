@@ -67,7 +67,7 @@
 ::Controller
 ..\tools\pce_gfx get tile track2.bin 0x017C000 16 16 10 17C000.orig 0 0 ..\xlate\17C000.xlate
 ::
-::How to Play initial screen
+::How to Play initial screen (translated)
 ..\tools\pce_gfx get tile track2.bin 0x0190C00 16 16 8 190C00.orig 0 0 ..\xlate\17C000.xlate
 ..\tools\pce_gfx get tile track2.bin 0x0192880 16 4 4 192880.orig 0 0 ..\xlate\17C000.xlate
 ..\tools\pce_gfx get tile track2.bin 0x0193000 16 16 6 193000.orig 0 0 ..\xlate\17C000.xlate
