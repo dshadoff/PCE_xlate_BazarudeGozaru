@@ -113,7 +113,7 @@
 ..\tools\pce_gfx get tile track2.bin 0x01C24E0 16 9 2 1C24E0.orig 0 0 ..\xlate\1A1400.xlate
 ..\tools\pce_gfx get tile track2.bin 0x01C7D00 16 6 2 1C7D00.orig 0 0 ..\xlate\1A1400.xlate
 ..\tools\pce_gfx get tile track2.bin 0x01CD500 16 8 2 1CD500.orig 0 0 ..\xlate\1A1400.xlate
-
+::
 ::Note: These are the names of the levels.
 ::      very similar to above, but monochrome
 ..\tools\pce_gfx get tile track2.bin 0x01D2100 16 8 2 1D2100.orig 0 0 ..\xlate\1D2020.xlate
@@ -124,6 +124,7 @@
 ..\tools\pce_gfx get tile track2.bin 0x01D2C00 16 10 2 1D2C00.orig 0 0 ..\xlate\1D2020.xlate
 ..\tools\pce_gfx get tile track2.bin 0x01D2D40 16 6 2 1D2D40.orig 0 0 ..\xlate\1D2020.xlate
 ..\tools\pce_gfx get tile track2.bin 0x01D30C0 16 8 2 1D30C0.orig 0 0 ..\xlate\1D2020.xlate
+
 
 ::
 :::: IN_GAME
@@ -185,6 +186,9 @@
 :: GOAL signs for Stage 8 (translated)
 ..\tools\pce_gfx get tile track2.bin 0x029A100 16 4 4 29A100.orig 0 0 ..\xlate\29A100.xlate
 ::
+:: End of level money tally yen sign
+::
+..\tools\pce_gfx get sprite track2.bin 0x11e700 1 1 1 11E700.orig 0 0 ..\xlate\11E700.xlate
 
 ::
 :::: Purchases at the store:
@@ -215,9 +219,10 @@
 ..\tools\pce_gfx get tile track2.bin 0x01F4000 16 16 14 1F4000.orig 0 0 ..\xlate\17C000.xlate
 
 
-:::: Bazaru's house screen heading
+:::: Bazaru's house screen heading (translated)
 ::
 ..\tools\pce_gfx get tile track2.bin 0x01F7000 16 16 4 1F7000.orig 0 0 ..\xlate\1F7000.xlate
+::
 ..\tools\pce_gfx get tile track2.bin 0x020B040 16 12 10 20B040.orig 0 0 ..\xlate\20B040.xlate
 ..\tools\pce_gfx get tile track2.bin 0x0210040 16 14 10 210040.orig 0 0 ..\xlate\210040.xlate
 

@@ -60,24 +60,25 @@
 ::Note: reinsertion only requires one image be translated
 ::
 ..\tools\pce_gfx put tile track2.bin 0x01A4C00 16 16 2 1A4C00.new 0 0 ..\xlate\1A1400.xlate
-::..\tools\pce_gfx put tile track2.bin 0x01AA400 16 16 2 1A4C00.new 0 0 ..\xlate\1A1400.xlate
-::..\tools\pce_gfx put tile track2.bin 0x01AFC00 16 16 2 1A4C00.new 0 0 ..\xlate\1A1400.xlate
-::..\tools\pce_gfx put tile track2.bin 0x01B5400 16 16 2 1A4C00.new 0 0 ..\xlate\1A1400.xlate
-::..\tools\pce_gfx put tile track2.bin 0x01BAC00 16 16 2 1A4C00.new 0 0 ..\xlate\1A1400.xlate
-::..\tools\pce_gfx put tile track2.bin 0x01C0400 16 16 2 1A4C00.new 0 0 ..\xlate\1A1400.xlate
-::..\tools\pce_gfx put tile track2.bin 0x01C5C00 16 16 2 1A4C00.new 0 0 ..\xlate\1A1400.xlate
-::..\tools\pce_gfx put tile track2.bin 0x01CB400 16 16 2 1A4C00.new 0 0 ..\xlate\1A1400.xlate
+..\tools\pce_gfx put tile track2.bin 0x01AA400 16 16 2 1A4C00.new 0 0 ..\xlate\1A1400.xlate
+..\tools\pce_gfx put tile track2.bin 0x01AFC00 16 16 2 1A4C00.new 0 0 ..\xlate\1A1400.xlate
+..\tools\pce_gfx put tile track2.bin 0x01B5400 16 16 2 1A4C00.new 0 0 ..\xlate\1A1400.xlate
+..\tools\pce_gfx put tile track2.bin 0x01BAC00 16 16 2 1A4C00.new 0 0 ..\xlate\1A1400.xlate
+..\tools\pce_gfx put tile track2.bin 0x01C0400 16 16 2 1A4C00.new 0 0 ..\xlate\1A1400.xlate
+..\tools\pce_gfx put tile track2.bin 0x01C5C00 16 16 2 1A4C00.new 0 0 ..\xlate\1A1400.xlate
+..\tools\pce_gfx put tile track2.bin 0x01CB400 16 16 2 1A4C00.new 0 0 ..\xlate\1A1400.xlate
 ::
 ::Note: These are all the same - "Stage"
 ::Note: reinsertion only requires one image be translated
 ::
 ..\tools\pce_gfx put tile track2.bin 0x01A6900 16 8 2 1A6900.new 0 0 ..\xlate\1A1400.xlate
-::..\tools\pce_gfx put tile track2.bin 0x01AC100 16 8 2 1A6900.new 0 0 ..\xlate\1A1400.xlate
-::..\tools\pce_gfx put tile track2.bin 0x01B1900 16 8 2 1A6900.new 0 0 ..\xlate\1A1400.xlate
-::..\tools\pce_gfx put tile track2.bin 0x01B7100 16 8 2 1A6900.new 0 0 ..\xlate\1A1400.xlate
-::..\tools\pce_gfx put tile track2.bin 0x01BC900 16 8 2 1A6900.new 0 0 ..\xlate\1A1400.xlate
-::..\tools\pce_gfx put tile track2.bin 0x01C2100 16 8 2 1A6900.new 0 0 ..\xlate\1A1400.xlate
-::..\tools\pce_gfx put tile track2.bin 0x01C7900 16 8 2 1A6900.new 0 0 ..\xlate\1A1400.xlate
+..\tools\pce_gfx put tile track2.bin 0x01AC100 16 8 2 1A6900.new 0 0 ..\xlate\1A1400.xlate
+..\tools\pce_gfx put tile track2.bin 0x01B1900 16 8 2 1A6900.new 0 0 ..\xlate\1A1400.xlate
+..\tools\pce_gfx put tile track2.bin 0x01B7100 16 8 2 1A6900.new 0 0 ..\xlate\1A1400.xlate
+..\tools\pce_gfx put tile track2.bin 0x01BC900 16 8 2 1A6900.new 0 0 ..\xlate\1A1400.xlate
+..\tools\pce_gfx put tile track2.bin 0x01C2100 16 8 2 1A6900.new 0 0 ..\xlate\1A1400.xlate
+..\tools\pce_gfx put tile track2.bin 0x01C7900 16 8 2 1A6900.new 0 0 ..\xlate\1A1400.xlate
+..\tools\pce_gfx put tile track2.bin 0x01CD100 16 8 2 1A6900.new 0 0 ..\xlate\1A1400.xlate
 
 ::
 :::: IN-GAME
@@ -138,7 +139,10 @@
 ::
 :: GOAL signs for Stage 8
 ..\tools\pce_gfx put tile track2.bin 0x029A100 16 4 4 29A100.new 0 0 ..\xlate\29A100.xlate
-
+::
+:: End of level money tally yen sign
+::
+..\tools\pce_gfx put sprite track2.bin 0x11e700 1 1 1 11E700.new 0 0 ..\xlate\11E700.xlate
 
 
 ::

@@ -12,17 +12,13 @@
 ## Choose Files screen
 
 - Backup RAM full (16900)
-- File wo erabu de Gozaru Heading
 
 ## World Map
 
-- Stage Select Heading (162800)
 - Stage & Round
 
 ## AREA Map
 
-- World Map ni Modoru
-- Stage
 - Level Names:
   - Yamamichi  (TRAIL ?  HIKE ?)
   - Sunahama (BEACH)
@@ -78,7 +74,7 @@ Screen 3 :
 
 ## Bazaru's House
 
-- Heading
+- Heading of his house - done
 
 
 ## Miscellaneous
