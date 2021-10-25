@@ -1,5 +1,14 @@
 :::: Title Screen:
 ::
+:: Bazaru de Gozaru no
+..\tools\pce_gfx put tile track2.bin 0x0172800 16 16 10 172800.new 0 0 ..\xlate\172800.xlate
+::
+:: Game de Gozaru
+..\tools\pce_gfx put sprite track2.bin 0x0177800 2 2 4 177800.new 0 0 ..\xlate\177800.xlate
+..\tools\pce_gfx put sprite track2.bin 0x0178000 2 2 4 177800.new 32 0 ..\xlate\177800.xlate
+..\tools\pce_gfx put sprite track2.bin 0x0178800 2 2 4 177800.new 64 0 ..\xlate\177800.xlate
+..\tools\pce_gfx put sprite track2.bin 0x0179000 2 2 4 177800.new 96 0 ..\xlate\177800.xlate
+::
 :: Run button wo Osu de Gozaru
 ..\tools\pce_gfx put tile track2.bin 0x0174840 16 14 2 174840.new 0 0 ..\xlate\174840.xlate
 

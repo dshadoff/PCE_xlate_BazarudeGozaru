@@ -2,9 +2,11 @@
 *.swp
 extract/*.iso
 extract/track2.bin
+extract/track2_orig.bin
 extract/*.orig
 reinsert/*.iso
 reinsert/track2.bin
+reinsert/track2_orig.bin
 reinsert/*.orig
 tools/*.o
 
