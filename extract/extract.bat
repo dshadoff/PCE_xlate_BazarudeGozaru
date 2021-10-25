@@ -15,7 +15,7 @@
 ::
 :::: CHOOSE FILE SCREEN
 ::
-:: File wo Erabu de Gozaru
+:: File wo Erabu de Gozaru (translated)
 ..\tools\pce_gfx get tile track2.bin 0x0181C00 16 16 8 181C00.orig 0 0 ..\xlate\181C00.xlate
 ::
 :: File, Stage/Round (translated)
@@ -42,7 +42,7 @@
 
 :::: WORLD MAP
 ::
-:: STAGE SELECT (screen heading)
+:: STAGE SELECT (screen heading) (translated)
 ..\tools\pce_gfx get sprite track2.bin 0x0162800 2 2 2 162800.orig 0 0 ..\xlate\162800.xlate
 ..\tools\pce_gfx get sprite track2.bin 0x0163000 2 2 2 162800.orig 32 0 ..\xlate\162800.xlate
 ..\tools\pce_gfx get sprite track2.bin 0x0163800 2 2 2 162800.orig 64 0 ..\xlate\162800.xlate

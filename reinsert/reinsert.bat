@@ -6,6 +6,9 @@
 ::
 :::: CHOOSE FILE SCREEN
 ::
+:: File wo Erabu de Gozaru
+..\tools\pce_gfx put tile track2.bin 0x0181C00 16 16 8 181C00.new 0 0 ..\xlate\181C00.xlate
+::
 :: File, Stage/Round
 ..\tools\pce_gfx put sprite track2.bin 0x0183800 2 2 2 183800.new 0 0 ..\xlate\183800.xlate
 ..\tools\pce_gfx put sprite track2.bin 0x0184000 2 2 2 183800.new 32 0 ..\xlate\183800.xlate
@@ -30,6 +33,14 @@
 
 :::: WORLD MAP
 ::
+:: STAGE SELECT (screen heading)
+..\tools\pce_gfx put sprite track2.bin 0x0162800 2 2 2 162800.new 0 0 ..\xlate\162800.xlate
+..\tools\pce_gfx put sprite track2.bin 0x0163000 2 2 2 162800.new 32 0 ..\xlate\162800.xlate
+..\tools\pce_gfx put sprite track2.bin 0x0163800 2 2 2 162800.new 64 0 ..\xlate\162800.xlate
+..\tools\pce_gfx put sprite track2.bin 0x0164000 2 2 2 162800.new 96 0 ..\xlate\162800.xlate
+..\tools\pce_gfx put sprite track2.bin 0x0162A00 2 2 2 162800.new 128 0 ..\xlate\162800.xlate
+..\tools\pce_gfx put sprite track2.bin 0x0163200 2 2 2 162800.new 160 0 ..\xlate\162800.xlate
+::
 :: Asobi kata
 ..\tools\pce_gfx put tile track2.bin 0x01A1400 16 6 4 1A1400.new 0 0 ..\xlate\1A1400.xlate
 
@@ -45,6 +56,28 @@
 ::
 :::: AREA MAP
 ::
+::Note: These are all the same - "World map ni Modoru"/"Return to World Map"
+::Note: reinsertion only requires one image be translated
+::
+..\tools\pce_gfx put tile track2.bin 0x01A4C00 16 16 2 1A4C00.new 0 0 ..\xlate\1A1400.xlate
+::..\tools\pce_gfx put tile track2.bin 0x01AA400 16 16 2 1A4C00.new 0 0 ..\xlate\1A1400.xlate
+::..\tools\pce_gfx put tile track2.bin 0x01AFC00 16 16 2 1A4C00.new 0 0 ..\xlate\1A1400.xlate
+::..\tools\pce_gfx put tile track2.bin 0x01B5400 16 16 2 1A4C00.new 0 0 ..\xlate\1A1400.xlate
+::..\tools\pce_gfx put tile track2.bin 0x01BAC00 16 16 2 1A4C00.new 0 0 ..\xlate\1A1400.xlate
+::..\tools\pce_gfx put tile track2.bin 0x01C0400 16 16 2 1A4C00.new 0 0 ..\xlate\1A1400.xlate
+::..\tools\pce_gfx put tile track2.bin 0x01C5C00 16 16 2 1A4C00.new 0 0 ..\xlate\1A1400.xlate
+::..\tools\pce_gfx put tile track2.bin 0x01CB400 16 16 2 1A4C00.new 0 0 ..\xlate\1A1400.xlate
+::
+::Note: These are all the same - "Stage"
+::Note: reinsertion only requires one image be translated
+::
+..\tools\pce_gfx put tile track2.bin 0x01A6900 16 8 2 1A6900.new 0 0 ..\xlate\1A1400.xlate
+::..\tools\pce_gfx put tile track2.bin 0x01AC100 16 8 2 1A6900.new 0 0 ..\xlate\1A1400.xlate
+::..\tools\pce_gfx put tile track2.bin 0x01B1900 16 8 2 1A6900.new 0 0 ..\xlate\1A1400.xlate
+::..\tools\pce_gfx put tile track2.bin 0x01B7100 16 8 2 1A6900.new 0 0 ..\xlate\1A1400.xlate
+::..\tools\pce_gfx put tile track2.bin 0x01BC900 16 8 2 1A6900.new 0 0 ..\xlate\1A1400.xlate
+::..\tools\pce_gfx put tile track2.bin 0x01C2100 16 8 2 1A6900.new 0 0 ..\xlate\1A1400.xlate
+::..\tools\pce_gfx put tile track2.bin 0x01C7900 16 8 2 1A6900.new 0 0 ..\xlate\1A1400.xlate
 
 ::
 :::: IN-GAME
@@ -133,4 +166,8 @@
 ..\tools\pce_gfx put tile track2.bin 0x01EE4C0 16 2 2 1EE4C0.new 0 0 ..\xlate\17C000.xlate
 ..\tools\pce_gfx put tile track2.bin 0x01F14C0 16 2 2 1F14C0.new 0 0 ..\xlate\17C000.xlate
 
+
+:::: Bazaru's house screen heading
+::
+..\tools\pce_gfx put tile track2.bin 0x01F7000 16 16 4 1F7000.new 0 0 ..\xlate\1F7000.xlate
 
