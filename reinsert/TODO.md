@@ -4,18 +4,12 @@
 - There is no "wrong system card" screen for this Super CD-ROM, oddly
   It simply goes to a black screen and stays there (on real hardware; Mednafen eventually goes back to the boot screen)
 
-## Title Screen
-
-- Bazaru de Gozaru ("Bazaru de Gozaru's")  (172800)
-- Game de gozaru ("Game" -> "Puzzle Game") (177800)
-
 ## Choose Files screen
 
 - Backup RAM full (16900)
 
 ## World Map
 
-- Stage & Round
 
 ## AREA Map
 
@@ -31,7 +25,6 @@
 
 ## IN-GAME
 
-- 10 yen bag (153400.orig)
 - Scrolling "Win"/"Lose" banners
 
 ## Shop
@@ -45,7 +38,7 @@ There is a list of strings on disk for these phrases:
 - strings start on disk at 0xA8DF (in memory 0x78DF)
 - strings seem to end at disk 0xAACF (in memory 0x7ACF)
 - strings are terminated with 0xff
-- string contents reference VRAM alphabet:
+- string contents reference VRAM alphabet (alphabet at 0x1F4000):
   A/I/U/E/O          = 00/01/02/03/04 
   KA/KI/KU/KE/KO     = 05/06/07/08/09 
   SA/SHI/SU/SE/SO    = 0A/0B/0C/0D/0E 
@@ -69,8 +62,8 @@ There is a list of strings on disk for these phrases:
 - Everything
 Screen 1 190C00 & 192880 & 193000 - done
 
-Screen 2 : 
-Screen 3 :
+Screen 2 :
+Screen 3 : icons (heading done)
 
 ## Bazaru's House
 
