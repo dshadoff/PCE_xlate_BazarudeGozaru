@@ -8,6 +8,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 /*
 #define DEBUG			0
@@ -79,7 +80,6 @@ char xlatefile_name[256];
 		printf("Invalid number of parameters : %d\n", argc);
 		printf("Usage:\n------\n");
 		printf("pce_gfx <get|put> <tile|sprite> <ROM file> <offset> <virt_width> <x_iter> <y_iter> <text_file> <text_x> <text_y> <xlate_file>\n\n");
-		printf("(Currently doesn't update ROM file)\n");
 		exit(1);
 	}
 

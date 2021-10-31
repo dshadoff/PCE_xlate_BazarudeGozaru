@@ -1,4 +1,4 @@
-# pce_gfx - a graphics  extraction/insertion utility
+# pce_gfx - a graphics extraction/insertion utility
 
 While working on several PC Engine conversion projects, I found that there
 is a challenge extracting the grpahics - both characters and tiles - from
@@ -31,6 +31,18 @@ Where:
 - xlate_file is the cross-reference file for which ASCII character to use for each palette value
 
 
+# patch - a utility to patch locations in a file to a list of values
 
-NOTE: A Windows command-line executable has been included here, but may be withdrawn at a later time.
+Sometimes you need to alter small numbers of bytes to reflect new values, like in a reference map for example
+You could set them by hand in a hex editor, but it's difficult to record for later communication and adjustment.
+
+## Syntax:
+patch <ROM file> <offset> <byte1> [<byte2> [<byte3> [... <byte16>] ] ]
+
+Where:
+- offset can be in decimal or hex (prefix with '0x' for hexadecimal)
+- every byte can be in decimal or hex (prefix with '0x' for hexadecimal) - up to 16 bytes can be set in this way
+
+
+NOTE: Windows command-line executables have been included here, but may be withdrawn at a later time.
 
