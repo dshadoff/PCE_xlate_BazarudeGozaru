@@ -47,11 +47,15 @@ Area | Action 1 | Action 2 | Reward
 3 | Jump Right | | 1 yen |
 4 | Roll| | 1 yen |
 5 | Jump Right | | 1 yen |
+5 (*)  | Moonwalk | | 10 yen + 1 yen |
 6 | Walk Left | | 1 yen |
 7 | Walk Right | | 1 yen |
 8 | Jump Left | Jump Right | 1 yen |
 9 | Push | | 1 yen |
 10 | Tiptoe | Jump Right | 10 yen |
+
+(*) - Return after unlocking Moonwalk
+
 
 ### STAGE 2 - Beach
 
@@ -65,8 +69,11 @@ Area | Action 1 | Action 2 | Action 3 | Reward
 6 | Push | Dance | Jump Right | 1 yen (times 2) |
 7 | Walk Right | Spin | | 1 yen |
 8 | Push | Jump Right | | 1 yen (times 2) |
+8 (*) | Left | Push | Jump Left | 1 yen |
 9 | Push | Jump Right | Jump Right | 10 yen + 1 yen |
 10 | Walk Right | Jump Left | Jump Right | 10 yen + 1 yen |
+
+(*) - Second run through
 
 ### STAGE 3 - Snow Country
 
@@ -77,11 +84,16 @@ Area | Action 1 | Action 2 | Action 3 | Reward
 3 | Walk Right | Walk Right | Jump Right | 1 yen |
 4 | Jump Right | Jump Right | Jump Left | 1 yen (times 2) |
 5 | Jump Right | Jump Right | | 1 yen |
+5 (*) | Right | Jump Right | | 1 yen |
 6 | Walk Right | Spin | | 1 yen |
 7 | Tiptoe | Walk Left | | 1 yen |
+7 (**) | Moonwalk | | | 10 yen |
 8 | Push | Jump Right | | 10 yen + 1 yen |
 9 | Spin | Jump Right | | 10 yen |
 10 | Walk Right | Spin | | 10 yen |
+
+(*) - Second run through
+(**) - Return after unlocking Moonwalk
 
 ### STAGE 4 - Graveyard
 
