@@ -102,6 +102,30 @@
 ..\tools\pce_gfx put tile track2.bin 0x01C2100 16 8 2 1A6900.new 0 0 ..\xlate\1A1400.xlate
 ..\tools\pce_gfx put tile track2.bin 0x01C7900 16 8 2 1A6900.new 0 0 ..\xlate\1A1400.xlate
 ..\tools\pce_gfx put tile track2.bin 0x01CD100 16 8 2 1A6900.new 0 0 ..\xlate\1A1400.xlate
+::
+::These are the names of the levels
+::
+..\tools\pce_gfx put tile track2.bin 0x01A6D00 16 8 2 1A6D00.new 0 0 ..\xlate\1A1400.xlate
+..\tools\pce_gfx put tile track2.bin 0x01AC500 16 8 2 1AC500.new 0 0 ..\xlate\1A1400.xlate
+..\tools\pce_gfx put tile track2.bin 0x01B1D00 16 8 2 1B1D00.new 0 0 ..\xlate\1A1400.xlate
+:: ..\tools\pce_gfx put tile track2.bin 0x01B7500 16 6 2 1B7500.new 0 0 ..\xlate\1A1400.xlate
+:: ..\tools\pce_gfx put tile track2.bin 0x01BCD00 16 6 2 1BCD00.orig 0 0 ..\xlate\1A1400.xlate
+..\tools\pce_gfx put tile track2.bin 0x01C24C0 16 10 2 1C24C0.orig 0 0 ..\xlate\1A1400.xlate
+..\tools\pce_gfx put tile track2.bin 0x01C7D00 16 6 2 1C7D00.orig 0 0 ..\xlate\1A1400.xlate
+..\tools\pce_gfx put tile track2.bin 0x01CD500 16 8 2 1CD500.orig 0 0 ..\xlate\1A1400.xlate
+::
+::Note: These are the names of the levels.
+::      very similar to above, but monochrome
+::
+..\tools\pce_gfx get tile track2.bin 0x01D2100 16 8 2 1D2100.orig 0 0 ..\xlate\1D2020.xlate
+..\tools\pce_gfx get tile track2.bin 0x01D2400 16 8 2 1D2400.orig 0 0 ..\xlate\1D2020.xlate
+..\tools\pce_gfx get tile track2.bin 0x01D2500 16 8 2 1D2500.orig 0 0 ..\xlate\1D2020.xlate
+:: ..\tools\pce_gfx get tile track2.bin 0x01D2800 16 6 2 1D2800.orig 0 0 ..\xlate\1D2020.xlate
+:: ..\tools\pce_gfx get tile track2.bin 0x01D28C0 16 6 2 1D28C0.orig 0 0 ..\xlate\1D2020.xlate
+..\tools\pce_gfx get tile track2.bin 0x01D2C00 16 10 2 1D2C00.orig 0 0 ..\xlate\1D2020.xlate
+..\tools\pce_gfx get tile track2.bin 0x01D2D40 16 6 2 1D2D40.orig 0 0 ..\xlate\1D2020.xlate
+..\tools\pce_gfx get tile track2.bin 0x01D30C0 16 8 2 1D30C0.orig 0 0 ..\xlate\1D2020.xlate
+
 
 ::
 :::: IN-GAME
