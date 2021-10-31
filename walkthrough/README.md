@@ -93,6 +93,7 @@ Area | Action 1 | Action 2 | Action 3 | Reward
 10 | Walk Right | Spin | | 10 yen |
 
 (*) - Second run through
+
 (**) - Return after unlocking Moonwalk
 
 ### STAGE 4 - Graveyard
