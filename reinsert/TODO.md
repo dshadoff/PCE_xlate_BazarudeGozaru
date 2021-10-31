@@ -13,19 +13,10 @@
 
 ## AREA Map
 
-- Level Names:
-  - Yamamichi  (TRAIL ?  HIKE ?)
-  - Sunahama (BEACH)
-  - Yukiguni (Ice world / Arctic)
-  - Hakaba (Cemetery)
-  - Sabaku (DESERT)
-  - Yuuenchi (Amusement Park / Carnival)
-  - Tokai (CITY)
-  - Uchuu (SPACE)
-
 ## IN-GAME
 
 - Scrolling "Win"/"Lose" banners
+- Names of levels at time of level completion
 
 ## Shop
 

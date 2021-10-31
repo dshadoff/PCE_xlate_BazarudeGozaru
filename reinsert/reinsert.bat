@@ -92,12 +92,12 @@
 ..\tools\pce_gfx put tile track2.bin 0x01CB400 16 16 2 1A4C00.new 0 0 ..\xlate\1A1400.xlate
 ::
 ::Note: These are all the same - "Stage"
-::Note: reinsertion only requires one image be translated
+::Note: reinsertion only requires one image be translated (except in one case)
 ::
 ..\tools\pce_gfx put tile track2.bin 0x01A6900 16 8 2 1A6900.new 0 0 ..\xlate\1A1400.xlate
 ..\tools\pce_gfx put tile track2.bin 0x01AC100 16 8 2 1A6900.new 0 0 ..\xlate\1A1400.xlate
 ..\tools\pce_gfx put tile track2.bin 0x01B1900 16 8 2 1A6900.new 0 0 ..\xlate\1A1400.xlate
-..\tools\pce_gfx put tile track2.bin 0x01B7100 16 8 2 1A6900.new 0 0 ..\xlate\1A1400.xlate
+..\tools\pce_gfx put tile track2.bin 0x01B7100 16 8 2 1B7100.new 0 0 ..\xlate\1A1400.xlate
 ..\tools\pce_gfx put tile track2.bin 0x01BC900 16 8 2 1A6900.new 0 0 ..\xlate\1A1400.xlate
 ..\tools\pce_gfx put tile track2.bin 0x01C2100 16 8 2 1A6900.new 0 0 ..\xlate\1A1400.xlate
 ..\tools\pce_gfx put tile track2.bin 0x01C7900 16 8 2 1A6900.new 0 0 ..\xlate\1A1400.xlate
@@ -105,13 +105,41 @@
 ::
 ::These are the names of the levels
 ::
+:: Stage 1 Trails:
 ..\tools\pce_gfx put tile track2.bin 0x01A6D00 16 8 2 1A6D00.new 0 0 ..\xlate\1A1400.xlate
+::
+:: Stage 2 Beach:
 ..\tools\pce_gfx put tile track2.bin 0x01AC500 16 8 2 1AC500.new 0 0 ..\xlate\1A1400.xlate
+::
+:: Stage 3 Arctic:
 ..\tools\pce_gfx put tile track2.bin 0x01B1D00 16 8 2 1B1D00.new 0 0 ..\xlate\1A1400.xlate
-:: ..\tools\pce_gfx put tile track2.bin 0x01B7500 16 6 2 1B7500.new 0 0 ..\xlate\1A1400.xlate
-:: ..\tools\pce_gfx put tile track2.bin 0x01BCD00 16 6 2 1BCD00.new 0 0 ..\xlate\1A1400.xlate
+::
+:: Stage 4 Cemetery:
+:: Note: stage 4 uses reclaimed tiles, and the leg of the "Y" in "CEMETERY" is a reused leg of the "T" 
+..\tools\pce_gfx put tile track2.bin 0x01B7500 16 8 2 1B7500.new 0 0 ..\xlate\1A1400.xlate
+..\tools\pce_gfx put tile track2.bin 0x01B7D00 2 2 1 1B7500.new 64 0 ..\xlate\1A1400.xlate
+..\tools\pce_gfx put tile track2.bin 0x01B73E0 1 1 1 1B7500.new 64 8 ..\xlate\1A1400.xlate
+:: Now, re-construct the meta-tile for "STAGE" to reclaim a tile:
+..\tools\patch track2.bin 0x01B829C 0x8E 0x8F 0x9E 0x8F
+:: Now, construct the meta-tile for the last 2 tiles:
+..\tools\patch track2.bin 0x01B82D4 0xAE 0xAF 0xBE 0xBF 0xE8 0xE9 0x9F 0xBD
+:: Now, address the meta-tiles on the overall map for the intro screen:
+..\tools\patch track2.bin 0x01B860D 0xAD 0xAE 0xAF 0xB4 0xB5
+::
+:: Stage 5 Desert:
+..\tools\pce_gfx put tile track2.bin 0x01BCD00 16 8 2 1BCD00.new 0 0 ..\xlate\1A1400.xlate
+:: Now, address the meta-tiles on the overall map for the intro screen, to display more tiles:
+..\tools\patch track2.bin 0x01BDE0D 0xAB 0xAC 0xAD 0xAE
+::
+:: Stage 6 Carnival:
 ..\tools\pce_gfx put tile track2.bin 0x01C24C0 16 10 2 1C24C0.new 0 0 ..\xlate\1A1400.xlate
+:: Now, adjust the meta-tiles on the overall map for intro screen, to shift name slightly:
+..\tools\patch track2.bin 0x01C360C 0x01 0xAB 0xAC 0xAD 0xAE 0xAF
+::
+:: Stage 7 City:
 ..\tools\pce_gfx put tile track2.bin 0x01C7D00 16 6 2 1C7D00.new 0 0 ..\xlate\1A1400.xlate
+::
+:: Stage 8 Space:
 ..\tools\pce_gfx put tile track2.bin 0x01CD500 16 8 2 1CD500.new 0 0 ..\xlate\1A1400.xlate
 ::
 ::Note: These are the names of the levels.
