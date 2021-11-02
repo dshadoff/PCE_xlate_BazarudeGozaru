@@ -38,7 +38,7 @@
 .
 
 
-### STAGE 1 - Mountain Road
+### STAGE 1 - Trails
 
 Area | Action 1 | Action 2 | Reward
 ---- | -------- | -------- | ------
@@ -75,7 +75,7 @@ Area | Action 1 | Action 2 | Action 3 | Reward
 
 (*) - Second run through
 
-### STAGE 3 - Snow Country
+### STAGE 3 - Arctic
 
 Area | Action 1 | Action 2 | Action 3 | Reward
 ---- | -------- | -------- | -------- | ------
@@ -97,7 +97,7 @@ Area | Action 1 | Action 2 | Action 3 | Reward
 
 (**) - Return after unlocking Moonwalk
 
-### STAGE 4 - Graveyard
+### STAGE 4 - Cemetery
 
 Area | Action 1 | Action 2 | Action 3 | Action 4 | Reward
 ---- | -------- | -------- | -------- | -------- | ------
@@ -127,7 +127,7 @@ Area | Action 1 | Action 2 | Action 3 | Action 4 | Reward
 9 | Blind | Walk Left | Walk Right | | 1 yen |
 10 | Walk Right | Walk Right | Spin | Jump Right | 10 yen |
 
-### STAGE 6 - Amusement Park
+### STAGE 6 - Carnival
 
 Area | Action 1 | Action 2 | Action 3 | Action 4 | Reward
 ---- | -------- | -------- | -------- | -------- | ------
