@@ -111,7 +111,7 @@
 ..\tools\pce_gfx get tile track2.bin 0x01C7900 16 8 2 1C7900.orig 0 0 ..\xlate\1A1400.xlate
 ..\tools\pce_gfx get tile track2.bin 0x01CD100 16 8 2 1CD100.orig 0 0 ..\xlate\1A1400.xlate
 ::
-::These are the names of the levels (mostly translated)
+::These are the names of the levels (translated)
 ::
 ..\tools\pce_gfx get tile track2.bin 0x01A6D00 16 8 2 1A6D00.orig 0 0 ..\xlate\1A1400.xlate
 ..\tools\pce_gfx get tile track2.bin 0x01AC500 16 8 2 1AC500.orig 0 0 ..\xlate\1A1400.xlate
@@ -124,17 +124,28 @@
 ..\tools\pce_gfx get tile track2.bin 0x01C7D00 16 6 2 1C7D00.orig 0 0 ..\xlate\1A1400.xlate
 ..\tools\pce_gfx get tile track2.bin 0x01CD500 16 8 2 1CD500.orig 0 0 ..\xlate\1A1400.xlate
 ::
-::Note: These are the names of the levels. (mostly translated)
+::Note: These are the names of the levels at the end of a Stage. (translated)
 ::      very similar to above, but monochrome
 ::
+:: "Complete"
+..\tools\pce_gfx get tile track2.bin 0x01D2020 16 7 2 1D2020.orig 0 0 ..\xlate\1D2020.xlate
+..\tools\pce_gfx get tile track2.bin 0x01D29A0 16 2 2 1D2020.orig 56 0 ..\xlate\1D2020.xlate
+
 ..\tools\pce_gfx get tile track2.bin 0x01D2100 16 8 2 1D2100.orig 0 0 ..\xlate\1D2020.xlate
 ..\tools\pce_gfx get tile track2.bin 0x01D2400 16 8 2 1D2400.orig 0 0 ..\xlate\1D2020.xlate
 ..\tools\pce_gfx get tile track2.bin 0x01D2500 16 8 2 1D2500.orig 0 0 ..\xlate\1D2020.xlate
-..\tools\pce_gfx get tile track2.bin 0x01D2800 16 8 2 1D2800.orig 0 0 ..\xlate\1D2020.xlate
-..\tools\pce_gfx get tile track2.bin 0x01D28C0 16 8 2 1D28C0.orig 0 0 ..\xlate\1D2020.xlate
+:: Stage 4
+..\tools\pce_gfx get tile track2.bin 0x01D2C00 16 1 2 1D2800.orig 0 0 ..\xlate\1D2020.xlate
+..\tools\pce_gfx get tile track2.bin 0x01D2800 16 6 2 1D2800.orig 8 0 ..\xlate\1D2020.xlate
+..\tools\pce_gfx get tile track2.bin 0x01D2DE0 16 1 2 1D2800.orig 56 0 ..\xlate\1D2020.xlate
+..\tools\pce_gfx get tile track2.bin 0x01D31A0 16 1 2 1D2800.orig 64 0 ..\xlate\1D2020.xlate
+..\tools\pce_gfx get tile track2.bin 0x01D2BE0 16 1 1 1D2800.orig 72 0 ..\xlate\1D2020.xlate
+::
+:: Stage 5
+..\tools\pce_gfx get tile track2.bin 0x01D28C0 16 7 2 1D28C0.orig 0 0 ..\xlate\1D2020.xlate
 ..\tools\pce_gfx get tile track2.bin 0x01D2C00 16 10 2 1D2C00.orig 0 0 ..\xlate\1D2020.xlate
-..\tools\pce_gfx get tile track2.bin 0x01D2D40 16 6 2 1D2D40.orig 0 0 ..\xlate\1D2020.xlate
-..\tools\pce_gfx get tile track2.bin 0x01D30C0 16 8 2 1D30C0.orig 0 0 ..\xlate\1D2020.xlate
+..\tools\pce_gfx get tile track2.bin 0x01D2D40 16 5 2 1D2D40.orig 0 0 ..\xlate\1D2020.xlate
+..\tools\pce_gfx get tile track2.bin 0x01D30C0 16 7 2 1D30C0.orig 0 0 ..\xlate\1D2020.xlate
 
 
 ::
@@ -216,7 +227,6 @@
 ::
 :: Note: These are discontiguous, but are connected (translated)
 ::
-..\tools\pce_gfx get tile track2.bin 0x01D2020 16 7 2 1D2020.orig 0 0 ..\xlate\1D2020.xlate
 ..\tools\pce_gfx get tile track2.bin 0x01D2980 16 4 2 1D2980.orig 0 0 ..\xlate\1D2020.xlate
 ::
 :: End of level money tally yen sign (translated)

@@ -142,17 +142,62 @@
 :: Stage 8 Space:
 ..\tools\pce_gfx put tile track2.bin 0x01CD500 16 8 2 1CD500.new 0 0 ..\xlate\1A1400.xlate
 ::
-::Note: These are the names of the levels.
+::
+::Note: These are the names of the levels at the end of the Stage congratulations message
 ::      very similar to above, but monochrome
 ::
+:: "Complete"
+..\tools\pce_gfx put tile track2.bin 0x01D2020 16 7 2 1D2020.new 0 0 ..\xlate\1D2020.xlate
+..\tools\pce_gfx put tile track2.bin 0x01D29A0 16 2 2 1D2020.new 56 0 ..\xlate\1D2020.xlate
+
+:: Stage 1 Trails:
 ..\tools\pce_gfx put tile track2.bin 0x01D2100 16 8 2 1D2100.new 0 0 ..\xlate\1D2020.xlate
+..\patch track2.bin 0x1D60BC 0x93 0x93 0x93 0x93
+..\patch track2.bin 0x1D60DC 0x93 0x93 0x93 0x93
+::
+:: Stage 2 Beach:
 ..\tools\pce_gfx put tile track2.bin 0x01D2400 16 8 2 1D2400.new 0 0 ..\xlate\1D2020.xlate
+..\patch track2.bin 0x1D68BC 0x93 0x93 0x93 0x93
+..\patch track2.bin 0x1D68DC 0x93 0x93 0x93 0x93
+::
+:: Stage 3 Arctic:
 ..\tools\pce_gfx put tile track2.bin 0x01D2500 16 8 2 1D2500.new 0 0 ..\xlate\1D2020.xlate
-:: ..\tools\pce_gfx put tile track2.bin 0x01D2800 16 6 2 1D2800.new 0 0 ..\xlate\1D2020.xlate
-:: ..\tools\pce_gfx put tile track2.bin 0x01D28C0 16 6 2 1D28C0.new 0 0 ..\xlate\1D2020.xlate
+..\patch track2.bin 0x1D70BC 0x93 0x93 0x93 0x93
+..\patch track2.bin 0x1D70DC 0x93 0x93 0x93 0x93
+::
+:: Stage 4 Cemetery:
+..\tools\pce_gfx put tile track2.bin 0x01D2C00 16 1 2 1D2800.new 0 0 ..\xlate\1D2020.xlate
+..\tools\pce_gfx put tile track2.bin 0x01D2800 16 6 2 1D2800.new 8 0 ..\xlate\1D2020.xlate
+..\tools\pce_gfx put tile track2.bin 0x01D2DE0 16 1 2 1D2800.new 56 0 ..\xlate\1D2020.xlate
+..\tools\pce_gfx put tile track2.bin 0x01D31A0 16 1 2 1D2800.new 64 0 ..\xlate\1D2020.xlate
+..\tools\pce_gfx put tile track2.bin 0x01D2BE0 16 1 1 1D2800.new 72 0 ..\xlate\1D2020.xlate
+..\patch track2.bin 0x1D78B4 0x93 0x60 0x93 0x70
+..\patch track2.bin 0x1D78B8 0x6F 0x8D 0x7F 0x9D
+..\patch track2.bin 0x1D78BC 0x5F 0x93 0x7D 0x93
+..\patch track2.bin 0x1D78DC 0x93 0x93 0x93 0x93
+..\patch track2.bin 0x1D7E27 0x2C 0x10 0x11 0x12 0x2D
+::
+:: Stage 5 Desert:
+..\tools\pce_gfx put tile track2.bin 0x01D28C0 16 7 2 1D28C0.new 0 0 ..\xlate\1D2020.xlate
+..\patch track2.bin 0x1D80DC 0x93 0x93 0x93 0x93
+..\patch track2.bin 0x1D8628 0x13 0x14 0x15 0x2E 0x01
+::
+:: Stage 6 Carnival:
 ..\tools\pce_gfx put tile track2.bin 0x01D2C00 16 10 2 1D2C00.new 0 0 ..\xlate\1D2020.xlate
-..\tools\pce_gfx put tile track2.bin 0x01D2D40 16 6 2 1D2D40.new 0 0 ..\xlate\1D2020.xlate
-..\tools\pce_gfx put tile track2.bin 0x01D30C0 16 8 2 1D30C0.new 0 0 ..\xlate\1D2020.xlate
+..\patch track2.bin 0x1D88BC 0x93 0x93 0x93 0x93
+..\patch track2.bin 0x1D88DC 0x93 0x93 0x93 0x93
+::
+:: Stage 7 City:
+..\tools\pce_gfx put tile track2.bin 0x01D2D40 16 5 2 1D2D40.new 0 0 ..\xlate\1D2020.xlate
+..\patch track2.bin 0x1D9080 0x6E 0x93 0x7E 0x93
+..\patch track2.bin 0x1D90BC 0x93 0x93 0x93 0x93
+..\patch track2.bin 0x1D90DC 0x93 0x93 0x93 0x93
+::
+:: Stage 8 Space:
+..\tools\pce_gfx put tile track2.bin 0x01D30C0 16 7 2 1D30C0.new 0 0 ..\xlate\1D2020.xlate
+..\patch track2.bin 0x1D9860 0x8C 0x93 0x9C 0x93
+..\patch track2.bin 0x1D98BC 0x93 0x93 0x93 0x93
+..\patch track2.bin 0x1D98DC 0x93 0x93 0x93 0x93
 
 
 ::
@@ -234,8 +279,7 @@
 ::
 :: Note: These are discontiguous, but are connected
 ::
-..\tools\pce_gfx put tile track2.bin 0x01D2020 16 7 2 1D2020.new 0 0 ..\xlate\1D2020.xlate
-..\tools\pce_gfx put tile track2.bin 0x01D2980 16 4 2 1D2980.new 0 0 ..\xlate\1D2020.xlate
+::..\tools\pce_gfx put tile track2.bin 0x01D2980 16 4 2 1D2980.new 0 0 ..\xlate\1D2020.xlate
 ::
 :: End of level money tally yen sign
 ::
