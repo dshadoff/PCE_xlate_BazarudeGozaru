@@ -57,12 +57,15 @@ int main(void) {
 	char foutname[256];
 	int ret;
 	int ptrloc;
-	int addr16;
+	int addr16, addr16_temp;
 	int index1, index2;
 	int sjis;
+	int message_loc[256];
+	int msg_num;
+	int i, count;
 	char char1, char2;
 
-	fin = fopen("track02.iso", "rb");
+	fin = fopen("track2.bin", "rb");
 	if (fin == NULL) {
 		printf("could not open the ISO\n");
 		exit(1);
@@ -79,52 +82,85 @@ int main(void) {
 		exit(1);
 	}
 
-	sprintf(foutname, "output.txt");
+	sprintf(foutname, "shoptalk.txt");
 	fout = fopen(foutname, "wb");
 	if (fout == NULL) {
 		printf("could not open the output file\n");
 		exit(1);
 	}
 
+	fprintf(fout, "; Bazaru de Gozaru - shop dialogue text\n");
+	fprintf(fout, "; -------------------------------------\n\n");
+	fprintf(fout, "\t.list\n\n");
+	fprintf(fout, "\t.code\n");
+	fprintf(fout, "\t.bank\t0 \n");
+	fprintf(fout, "\t.incbin\t\"txtblk.bin\"\n\n");
 
 	ptrloc = 0x77C5;
-//
-//	while (ptrloc < 0x77D5) {
-//		printf("%2.2x ", track_data[ptrloc]);
-//		ptrloc++;
-//	}
-//
-//	exit(0);
+	msg_num = 1;
 
-//	Note the pointer array meanings are something like this:
-//  For example, let's look at:
-//	02 79 06 0C 02 04 01 20
-//  offset -> meaning
-//
-//	00/01 = pointer location ($7902 above)
-//	02 = x-location on line (06 above)
-//	03 = y-location (line ?) (0C above)
-//	04 = related to number of blanks at end (02 above)
-//	05 = unclear
-//	06 = horizontal position of word-bubble pointer (01 above)
-//	07 = unclear
+	fprintf(fout, "\t.ORG\t$%4.4X\n\n", ptrloc);
+
+	//	Note the pointer array meanings are something like this:
+	//  For example, let's look at:
+	//	02 79 06 0C 02 04 01 20
+	//  offset -> meaning
+	//
+	//	00/01 = pointer location ($7902 above)
+	//	02 = x-location on line (06 above)
+	//	03 = y-location (line ?) (0C above)
+	//	04 = related to number of blanks at end (02 above)
+	//	05 = unclear
+	//	06 = horizontal position of word-bubble pointer (01 above)
+	//	07 = unclear
+
+	fprintf(fout, "ptrtbl:\n\n");
+	fprintf(fout, "; Pointer table:\n");
+	fprintf(fout, "; bytes 00/01 = ptrtbl:\n");
+	fprintf(fout, "; 00/01 = pointer location ($7902 above)\n");
+	fprintf(fout, "; 02 = x-location on line (06 above)\n");
+	fprintf(fout, "; 03 = y-location (line ?) (0C above)\n");
+	fprintf(fout, "; 04 = related to number of blanks at end (02 above)\n");
+	fprintf(fout, "; 05 = unclear\n");
+	fprintf(fout, "; 06 = horizontal position of word-bubble pointer (01 above)\n");
+	fprintf(fout, "; 07 = unclear\n\n");
 
 	while (ptrloc < 0x78E4) {
 		addr16 = array[ptrloc] + (array[ptrloc + 1] << 8);
-		fprintf(fout, "pointer %4.4x -> %4.4x\n", ptrloc, addr16);
 
-		while (array[addr16] != 0xff) {
-			fprintf(fout, "%2.2x ", array[addr16]);
-			addr16++;
+		fprintf(fout, "msgptr%2.2d:\n", msg_num);
+		fprintf(fout, "\t.dw\tmsg%2.2d\t\t; orig $%4.4X\n", msg_num, addr16);
+		message_loc[msg_num -1] = addr16;
+		fprintf(fout, "\t.db\t$%2.2X,$%2.2X,$%2.2X,$%2.2X,$%2.2X,$%2.2X\n\n", array[ptrloc+2], array[ptrloc+3],
+				array[ptrloc+4], array[ptrloc+5], array[ptrloc+6], array[ptrloc+7]);
+		ptrloc += 8;
+		msg_num++;
+	}
+	fprintf(fout, "\n\n");
+
+	fprintf(fout, "; Now for the messages - space is good until $7ADF\n");
+	fprintf(fout, "; After that, if more space is needed, start at $7C50\n\n");
+
+//	for (i = 0; i < msg_num - 1; i++) {
+//		printf("message %d = $%4.4X\n", i+1, message_loc[i]);
+//	}
+
+	i = 0;
+	addr16 = 0;
+
+	while (i < msg_num - 1) {
+		if (addr16 != message_loc[i]) {
+			addr16 = message_loc[i];
+			fprintf(fout, "\t.org\t$%4.4X\n", addr16);
 		}
-		fprintf(fout, "\n");
+		fprintf(fout, "msg%2.2d:\t;", i+1);
 
-		addr16 = array[ptrloc] + (array[ptrloc + 1] << 8);
+		addr16_temp = addr16;
+
 		while (array[addr16] != 0xff) {
 			index1 = (array[addr16] & 0xE0) >> 1;
 			index2 = array[addr16] & 0x0F;
 			sjis = symbols[index1 + index2];
-//			printf("%4.4x ", sjis );
 
 			char1 = ((sjis & 0xff00) >> 8);
 			char2 =  (sjis & 0x00ff);
@@ -132,10 +168,38 @@ int main(void) {
 			fprintf(fout, "%c%c", char1, char2 );
 			addr16++;
 		}
-		fprintf(fout, "\n\n");
+		fprintf(fout, "\n");
 
-		ptrloc += 8;
+		addr16 = addr16_temp;
+		count = 0;
+
+		while (1) {
+			if (array[addr16] == 0xff) {
+				if (count != 0)
+					fprintf(fout, "\n");
+
+				fprintf(fout, "\t.db\t$FF");
+				addr16++;
+				break;
+			}
+
+			if (count == 0)
+				fprintf(fout, "\t.db\t");
+			else
+				fprintf(fout, ",");
+
+			fprintf(fout, "$%2.2X", array[addr16++]);
+			count++;
+
+			if (count == 8) {
+				fprintf(fout, "\n");
+				count = 0;
+			}
+		}
+		fprintf(fout, "\n\n");
+		i++;
 	}
+
 	fclose(fout);
 	fclose(fin);
 }
