@@ -46,6 +46,15 @@
 ..\tools\pce_gfx get tile track2.bin 0x01829E0 1 1 1 1829E0.orig 0 0 ..\xlate\1829E0.xlate
 ..\tools\pce_gfx get tile track2.bin 0x0182BE0 1 1 1 1829E0.orig 0 8 ..\xlate\1829E0.xlate
 
+::
+:: Backup File message (not enough space)
+::
+..\tools\pce_gfx get tile track2.bin 0x0169000 16 16 14 169000.orig 0 0 ..\xlate\169000.xlate
+::
+:: "Onegai" (translated)
+::
+..\tools\pce_gfx get tile track2.bin 0x016BD40 16 4 4 16BD40.orig 0 0 ..\xlate\169000.xlate
+
 
 :::: WORLD MAP
 ::
@@ -225,10 +234,6 @@
 ::
 ..\tools\pce_gfx get tile track2.bin 0x01D4000 16 16 5 1D4000.orig 0 0 ..\xlate\1D4000.xlate
 ::
-:: Note: These are discontiguous, but are connected (translated)
-::
-..\tools\pce_gfx get tile track2.bin 0x01D2980 16 4 2 1D2980.orig 0 0 ..\xlate\1D2020.xlate
-::
 :: End of level money tally yen sign (translated)
 ::
 ..\tools\pce_gfx get sprite track2.bin 0x11e700 1 1 1 11E700.orig 0 0 ..\xlate\11E700.xlate
@@ -303,12 +308,6 @@
 
 :: "Alphabet"
 ..\tools\pce_gfx get tile track2.bin 0x00DB200 16 16 4 0DB200.orig 0 0 ..\xlate\0DB200.xlate
-
-:: Backup File message
-..\tools\pce_gfx get tile track2.bin 0x0169000 16 16 14 169000.orig 0 0 ..\xlate\169000.xlate
-
-:: "Onegai"
-..\tools\pce_gfx get tile track2.bin 0x016BD40 16 4 4 16BD40.orig 0 0 ..\xlate\169000.xlate
 
 
 :: Yen bag

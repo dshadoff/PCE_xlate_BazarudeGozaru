@@ -46,6 +46,10 @@
 ..\tools\pce_gfx put tile track2.bin 0x01829E0 1 1 1 1829E0.new 0 0 ..\xlate\1829E0.xlate
 ..\tools\pce_gfx put tile track2.bin 0x0182BE0 1 1 1 1829E0.new 0 8 ..\xlate\1829E0.xlate
 
+::
+:: "Onegai"
+::
+..\tools\pce_gfx put tile track2.bin 0x016BD40 16 4 4 16BD40.new 0 0 ..\xlate\169000.xlate
 
 :::: WORLD MAP
 ::
@@ -276,10 +280,6 @@
 ::End of level heading
 ::
 ..\tools\pce_gfx put tile track2.bin 0x01D4000 16 16 5 1D4000.new 0 0 ..\xlate\1D4000.xlate
-::
-:: Note: These are discontiguous, but are connected
-::
-::..\tools\pce_gfx put tile track2.bin 0x01D2980 16 4 2 1D2980.new 0 0 ..\xlate\1D2020.xlate
 ::
 :: End of level money tally yen sign
 ::
