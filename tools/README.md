@@ -23,7 +23,7 @@ pce_gfx can also deal with smaller graphic elements, to build them into a larger
 (or extract portions for reinsertion).
 
 ### Syntax:
-pce_gfx [get|put] <tile|sprite> <ROM file> <offset> <virt_width> <x_iter> <y_iter> <text_file> <text_x> <text_y> <xlate_file>
+pce_gfx [get|put] [tile|sprite] ROM_file offset virt_width x_iter y_iter text_file text_x text_y xlate_file
 
 Where:
 - offset can be in decimal or hex (prefix with '0x' for hexadecimal)
@@ -39,7 +39,7 @@ Sometimes you need to alter small numbers of bytes to reflect new values, like i
 You could set them by hand in a hex editor, but it's difficult to record for later communication and adjustment.
 
 ### Syntax:
-patch <ROM file> <offset> <byte1> [<byte2> [<byte3> [... <byte16>] ] ]
+patch ROM_file offset byte1 {byte2 {byte3 {... byte16} } }
 
 Where:
 - offset can be in decimal or hex (prefix with '0x' for hexadecimal)
@@ -56,7 +56,7 @@ binary.  So this utility is made for extracting one or more banks to be used as 
 assembler to overlay as needed.  The utility will also re-implant the adjusted banks.
 
 ### Syntax:
-yankbank [out|in] <main_file> <offset> <num_banks> <extract_file>
+yankbank [out|in] main_file offset num_banks extract_file
 
 Where:
 - 'out' means to extract from the main_file / 'in' means to replace
