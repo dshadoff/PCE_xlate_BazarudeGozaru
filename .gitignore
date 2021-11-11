@@ -11,4 +11,5 @@ reinsert/track2_orig.bin
 reinsert/*.orig
 tools/*.bin
 tools/*.o
+tools/shop_talk_extract/*.bin
 
