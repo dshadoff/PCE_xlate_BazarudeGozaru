@@ -13,7 +13,7 @@
 #include <string.h>
 
 unsigned char array[65540];
-FILE *fin, *fout;
+FILE *fextract, *fmain;
 
 int symbols[] = {
 // A I U E O
@@ -65,8 +65,8 @@ int main(void) {
 	int i, count;
 	char char1, char2;
 
-	fin = fopen("track2.bin", "rb");
-	if (fin == NULL) {
+	fextract = fopen("track2.bin", "rb");
+	if (fextract == NULL) {
 		printf("could not open the ISO\n");
 		exit(1);
 	}
@@ -74,32 +74,33 @@ int main(void) {
 	// disk offset 0xA7C5 corresponds to in-memory 0x77C5
 	// grab 64KB, but ignore anything outside the appropriate segment
 	//
-	fseek(fin, 0x3000, SEEK_SET);
+	fseek(fextract, 0x3000, SEEK_SET);
 
-	ret = fread(array, 1, 65536, fin);
+	ret = fread(array, 1, 65536, fextract);
 	if (ret != 65536) {
 		printf("Problem reading 65536 bytes; ret = %d\n", ret);
 		exit(1);
 	}
 
 	sprintf(foutname, "shoptalk.txt");
-	fout = fopen(foutname, "wb");
-	if (fout == NULL) {
+	fmain = fopen(foutname, "wb");
+	if (fmain == NULL) {
 		printf("could not open the output file\n");
 		exit(1);
 	}
 
-	fprintf(fout, "; Bazaru de Gozaru - shop dialogue text\n");
-	fprintf(fout, "; -------------------------------------\n\n");
-	fprintf(fout, "\t.list\n\n");
-	fprintf(fout, "\t.code\n");
-	fprintf(fout, "\t.bank\t0 \n");
-	fprintf(fout, "\t.incbin\t\"txtblk.bin\"\n\n");
+	fprintf(fmain, "; Bazaru de Gozaru - shop dialogue text\n");
+	fprintf(fmain, "; -------------------------------------\n\n");
+	fprintf(fmain, "\t.list\n\n");
+	fprintf(fmain, "\t.code\n");
+	fprintf(fmain, "\t.bank\t0 \n");
+	fprintf(fmain, "\t.incbin\t\"txtblk.bin\"\n\n");
+	fprintf(fmain, "\t.bank\t0 \n");
 
-	ptrloc = 0x77C5;
+	ptrloc = 0x77BF;
 	msg_num = 1;
 
-	fprintf(fout, "\t.ORG\t$%4.4X\n\n", ptrloc);
+	fprintf(fmain, "\t.ORG\t$%4.4X\n\n", ptrloc);
 
 	//	Note the pointer array meanings are something like this:
 	//  For example, let's look at:
@@ -114,32 +115,31 @@ int main(void) {
 	//	06 = horizontal position of word-bubble pointer (01 above)
 	//	07 = unclear
 
-	fprintf(fout, "ptrtbl:\n\n");
-	fprintf(fout, "; Pointer table:\n");
-	fprintf(fout, "; bytes 00/01 = ptrtbl:\n");
-	fprintf(fout, "; 00/01 = pointer location ($7902 above)\n");
-	fprintf(fout, "; 02 = x-location on line (06 above)\n");
-	fprintf(fout, "; 03 = y-location (line ?) (0C above)\n");
-	fprintf(fout, "; 04 = related to number of blanks at end (02 above)\n");
-	fprintf(fout, "; 05 = unclear\n");
-	fprintf(fout, "; 06 = horizontal position of word-bubble pointer (01 above)\n");
-	fprintf(fout, "; 07 = unclear\n\n");
+	fprintf(fmain, "ptrtbl:\n\n");
+	fprintf(fmain, "; Pointer table:\n");
+	fprintf(fmain, "; 00 = x-location on line\n");
+	fprintf(fmain, "; 01 = y-location (line ?)\n");
+	fprintf(fmain, "; 02 = related to number of blanks at end\n");
+	fprintf(fmain, "; 03 = unclear\n");
+	fprintf(fmain, "; 04 = horizontal position of word-bubble pointer\n");
+	fprintf(fmain, "; 05 = unclear\n");
+	fprintf(fmain, "; 06/07 = pointer location\n\n");
 
-	while (ptrloc < 0x78E4) {
-		addr16 = array[ptrloc] + (array[ptrloc + 1] << 8);
+	while (ptrloc < 0x78DF) {
 
-		fprintf(fout, "msgptr%2.2d:\n", msg_num);
-		fprintf(fout, "\t.dw\tmsg%2.2d\t\t; orig $%4.4X\n", msg_num, addr16);
+		fprintf(fmain, "msgptr%2.2d:\n", msg_num);
+		fprintf(fmain, "\t.db\t$%2.2X,$%2.2X,$%2.2X,$%2.2X,$%2.2X,$%2.2X\n", array[ptrloc], array[ptrloc+1],
+				array[ptrloc+2], array[ptrloc+3], array[ptrloc+4], array[ptrloc+5]);
+		addr16 = array[ptrloc+6] + (array[ptrloc + 7] << 8);
+		fprintf(fmain, "\t.dw\tmsg%2.2d\t\t; orig $%4.4X\n\n", msg_num, addr16);
 		message_loc[msg_num -1] = addr16;
-		fprintf(fout, "\t.db\t$%2.2X,$%2.2X,$%2.2X,$%2.2X,$%2.2X,$%2.2X\n\n", array[ptrloc+2], array[ptrloc+3],
-				array[ptrloc+4], array[ptrloc+5], array[ptrloc+6], array[ptrloc+7]);
 		ptrloc += 8;
 		msg_num++;
 	}
-	fprintf(fout, "\n\n");
+	fprintf(fmain, "\n\n");
 
-	fprintf(fout, "; Now for the messages - space is good until $7ADF\n");
-	fprintf(fout, "; After that, if more space is needed, start at $7C50\n\n");
+	fprintf(fmain, "; Now for the messages - space is good until $7ADF\n");
+	fprintf(fmain, "; After that, if more space is needed, start at $7C50\n\n");
 
 //	for (i = 0; i < msg_num - 1; i++) {
 //		printf("message %d = $%4.4X\n", i+1, message_loc[i]);
@@ -151,9 +151,9 @@ int main(void) {
 	while (i < msg_num - 1) {
 		if (addr16 != message_loc[i]) {
 			addr16 = message_loc[i];
-			fprintf(fout, "\t.org\t$%4.4X\n", addr16);
+			fprintf(fmain, "\t.org\t$%4.4X\n", addr16);
 		}
-		fprintf(fout, "msg%2.2d:\t;", i+1);
+		fprintf(fmain, "msg%2.2d:\t;", i+1);
 
 		addr16_temp = addr16;
 
@@ -165,10 +165,10 @@ int main(void) {
 			char1 = ((sjis & 0xff00) >> 8);
 			char2 =  (sjis & 0x00ff);
 
-			fprintf(fout, "%c%c", char1, char2 );
+			fprintf(fmain, "%c%c", char1, char2 );
 			addr16++;
 		}
-		fprintf(fout, "\n");
+		fprintf(fmain, "\n");
 
 		addr16 = addr16_temp;
 		count = 0;
@@ -176,30 +176,30 @@ int main(void) {
 		while (1) {
 			if (array[addr16] == 0xff) {
 				if (count != 0)
-					fprintf(fout, "\n");
+					fprintf(fmain, "\n");
 
-				fprintf(fout, "\t.db\t$FF");
+				fprintf(fmain, "\t.db\t$FF");
 				addr16++;
 				break;
 			}
 
 			if (count == 0)
-				fprintf(fout, "\t.db\t");
+				fprintf(fmain, "\t.db\t");
 			else
-				fprintf(fout, ",");
+				fprintf(fmain, ",");
 
-			fprintf(fout, "$%2.2X", array[addr16++]);
+			fprintf(fmain, "$%2.2X", array[addr16++]);
 			count++;
 
 			if (count == 8) {
-				fprintf(fout, "\n");
+				fprintf(fmain, "\n");
 				count = 0;
 			}
 		}
-		fprintf(fout, "\n\n");
+		fprintf(fmain, "\n\n");
 		i++;
 	}
 
-	fclose(fout);
-	fclose(fin);
+	fclose(fmain);
+	fclose(fextract);
 }

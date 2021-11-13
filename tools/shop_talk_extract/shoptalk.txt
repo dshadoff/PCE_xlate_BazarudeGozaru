@@ -8,163 +8,162 @@
 	.incbin	"txtblk.bin"
 
 	.bank	0 
-	.ORG	$77C5
+	.ORG	$77BF
 
 ptrtbl:
 
 ; Pointer table:
-; bytes 00/01 = ptrtbl:
-; 00/01 = pointer location ($7902 above)
-; 02 = x-location on line (06 above)
-; 03 = y-location (line ?) (0C above)
-; 04 = related to number of blanks at end (02 above)
+; 00 = x-location on line
+; 01 = y-location (line ?)
+; 02 = related to number of blanks at end
+; 03 = unclear
+; 04 = horizontal position of word-bubble pointer
 ; 05 = unclear
-; 06 = horizontal position of word-bubble pointer (01 above)
-; 07 = unclear
+; 06/07 = pointer location
 
 msgptr01:
+	.db	$0A,$0C,$07,$04,$02,$60
 	.dw	msg01		; orig $78DF
-	.db	$03,$0C,$06,$04,$01,$40
 
 msgptr02:
+	.db	$03,$0C,$06,$04,$01,$40
 	.dw	msg02		; orig $78F1
-	.db	$05,$0C,$04,$04,$01,$20
 
 msgptr03:
+	.db	$05,$0C,$04,$04,$01,$20
 	.dw	msg03		; orig $7902
-	.db	$06,$0C,$02,$04,$01,$20
 
 msgptr04:
+	.db	$06,$0C,$02,$04,$01,$20
 	.dw	msg04		; orig $790E
-	.db	$04,$0C,$05,$04,$01,$20
 
 msgptr05:
+	.db	$04,$0C,$05,$04,$01,$20
 	.dw	msg05		; orig $7917
-	.db	$0D,$0C,$03,$04,$02,$20
 
 msgptr06:
+	.db	$0D,$0C,$03,$04,$02,$20
 	.dw	msg06		; orig $7924
-	.db	$03,$0C,$06,$04,$01,$20
 
 msgptr07:
+	.db	$03,$0C,$06,$04,$01,$20
 	.dw	msg07		; orig $792E
-	.db	$0D,$0C,$03,$04,$02,$20
 
 msgptr08:
+	.db	$0D,$0C,$03,$04,$02,$20
 	.dw	msg08		; orig $793E
-	.db	$0C,$0C,$05,$04,$02,$20
 
 msgptr09:
+	.db	$0C,$0C,$05,$04,$02,$20
 	.dw	msg09		; orig $7949
-	.db	$0E,$0C,$02,$04,$02,$40
 
 msgptr10:
+	.db	$0E,$0C,$02,$04,$02,$40
 	.dw	msg10		; orig $7956
-	.db	$0C,$0C,$04,$04,$02,$20
 
 msgptr11:
+	.db	$0C,$0C,$04,$04,$02,$20
 	.dw	msg11		; orig $795F
-	.db	$0A,$0C,$08,$04,$02,$20
 
 msgptr12:
+	.db	$0A,$0C,$08,$04,$02,$20
 	.dw	msg12		; orig $796B
-	.db	$0C,$0C,$05,$04,$02,$20
 
 msgptr13:
-	.dw	msg13		; orig $797E
 	.db	$0C,$0C,$05,$04,$02,$20
+	.dw	msg13		; orig $797E
 
 msgptr14:
-	.dw	msg14		; orig $798C
 	.db	$0C,$0C,$05,$04,$02,$20
+	.dw	msg14		; orig $798C
 
 msgptr15:
+	.db	$0C,$0C,$05,$04,$02,$20
 	.dw	msg15		; orig $799A
-	.db	$0C,$0C,$07,$04,$02,$20
 
 msgptr16:
-	.dw	msg16		; orig $79A7
 	.db	$0C,$0C,$07,$04,$02,$20
+	.dw	msg16		; orig $79A7
 
 msgptr17:
-	.dw	msg17		; orig $79B3
 	.db	$0C,$0C,$07,$04,$02,$20
+	.dw	msg17		; orig $79B3
 
 msgptr18:
-	.dw	msg18		; orig $79C1
 	.db	$0C,$0C,$07,$04,$02,$20
+	.dw	msg18		; orig $79C1
 
 msgptr19:
-	.dw	msg19		; orig $79CD
 	.db	$0C,$0C,$07,$04,$02,$20
+	.dw	msg19		; orig $79CD
 
 msgptr20:
-	.dw	msg20		; orig $79DB
 	.db	$0C,$0C,$07,$04,$02,$20
+	.dw	msg20		; orig $79DB
 
 msgptr21:
-	.dw	msg21		; orig $79E8
 	.db	$0C,$0C,$07,$04,$02,$20
+	.dw	msg21		; orig $79E8
 
 msgptr22:
-	.dw	msg22		; orig $79F9
 	.db	$0C,$0C,$07,$04,$02,$20
+	.dw	msg22		; orig $79F9
 
 msgptr23:
-	.dw	msg23		; orig $7A07
 	.db	$0C,$0C,$07,$04,$02,$20
+	.dw	msg23		; orig $7A07
 
 msgptr24:
+	.db	$0C,$0C,$07,$04,$02,$20
 	.dw	msg24		; orig $7A16
-	.db	$0A,$0C,$08,$04,$02,$20
 
 msgptr25:
+	.db	$0A,$0C,$08,$04,$02,$20
 	.dw	msg25		; orig $7A25
-	.db	$0C,$0C,$07,$04,$02,$20
 
 msgptr26:
+	.db	$0C,$0C,$07,$04,$02,$20
 	.dw	msg26		; orig $7A39
-	.db	$0A,$0C,$08,$04,$02,$20
 
 msgptr27:
+	.db	$0A,$0C,$08,$04,$02,$20
 	.dw	msg27		; orig $7A45
-	.db	$0C,$0C,$07,$04,$02,$20
 
 msgptr28:
-	.dw	msg28		; orig $7A5A
 	.db	$0C,$0C,$07,$04,$02,$20
+	.dw	msg28		; orig $7A5A
 
 msgptr29:
-	.dw	msg29		; orig $7A65
 	.db	$0C,$0C,$07,$04,$02,$20
+	.dw	msg29		; orig $7A65
 
 msgptr30:
-	.dw	msg30		; orig $7A72
 	.db	$0C,$0C,$07,$04,$02,$20
+	.dw	msg30		; orig $7A72
 
 msgptr31:
-	.dw	msg31		; orig $7A7D
 	.db	$0C,$0C,$07,$04,$02,$20
+	.dw	msg31		; orig $7A7D
 
 msgptr32:
-	.dw	msg32		; orig $7A8A
 	.db	$0C,$0C,$07,$04,$02,$20
+	.dw	msg32		; orig $7A8A
 
 msgptr33:
-	.dw	msg33		; orig $7A96
 	.db	$0C,$0C,$07,$04,$02,$20
+	.dw	msg33		; orig $7A96
 
 msgptr34:
-	.dw	msg34		; orig $7AA3
 	.db	$0C,$0C,$07,$04,$02,$20
+	.dw	msg34		; orig $7AA3
 
 msgptr35:
-	.dw	msg35		; orig $7AB1
 	.db	$0C,$0C,$07,$04,$02,$20
+	.dw	msg35		; orig $7AB1
 
 msgptr36:
+	.db	$0C,$0C,$07,$04,$02,$20
 	.dw	msg36		; orig $7ABF
-	.db	$01,$43,$8D,$0B,$8A,$01
 
 
 
