@@ -320,7 +320,11 @@
 ::
 :: Alphabet for conversation with shop owner
 ::
-::  ..\tools\pce_gfx put tile track2.bin 0x01F4000 16 16 14 1F4000.new 0 0 ..\xlate\17C000.xlate
+..\tools\pce_gfx put tile track2.bin 0x01F4000 16 16 14 1F4000.new 0 0 ..\xlate\17C000.xlate
+::
+:: ** Note: the conversation between shop owner and Bazar   **
+:: **       is inserted separately in folder reins_shoptalk **
+::
 
 
 ::

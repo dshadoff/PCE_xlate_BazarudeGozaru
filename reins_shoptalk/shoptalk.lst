@@ -1,0 +1,775 @@
+#[1]   shoptalk.asm
+    6                     
+    7           E000      	.code
+    8           0000      	.bank	0 
+    9  00:E000            	.incbin	"txtblk.bin"
+   10                     
+   11           0000      	.bank	0 
+   12                     
+   13           77BF      	.ORG	$77BF
+   14                     
+   15  00:77BF            ptrtbl:
+   16                     
+   17                     ; Pointer table:
+   18                     ; 00 = x-location on line
+   19                     ; 01 = y-location (line ?)
+   20                     ; 02 = related to number of blanks at end (02 above)
+   21                     ; 03 = unclear
+   22                     ; 04 = horizontal position of word-bubble pointer (01 above)
+   23                     ; 05 = unclear
+   24                     ; 06/07 = pointer location ($7902 above)
+   25                     
+   26  00:77BF            msgptr01:	; May I help you ?
+   27                     ;	.db	$0A,$0C,$07,$04,$02,$60
+   28  00:77BF  0A 0C 06  	.db	$0A,$0C,$06,$04,$02,$60
+       00:77C2  04 02 60  
+   29  00:77C5  DF 78     	.dw	msg01		; orig $78DF
+   30                     
+   31  00:77C7            msgptr02:	; What do you have today ?
+   32                     ;	.db	$03,$0C,$06,$04,$01,$40
+   33  00:77C7  03 0C 0A  	.db	$03,$0C,$0A,$04,$01,$40
+       00:77CA  04 01 40  
+   34  00:77CD  F0 78     	.dw	msg02		; orig $78F1
+   35                     
+   36  00:77CF            msgptr03:	; Hmmm...
+   37                     ;	.db	$05,$0C,$04,$04,$01,$20
+   38  00:77CF  05 0C 02  	.db	$05,$0C,$02,$04,$01,$20
+       00:77D2  04 01 20  
+   39  00:77D5  09 79     	.dw	msg03		; orig $7902
+   40                     
+   41  00:77D7            msgptr04:	; Nice.
+   42                     ;	.db	$06,$0C,$02,$04,$01,$20
+   43  00:77D7  06 0C 01  	.db	$06,$0C,$01,$04,$01,$20
+       00:77DA  04 01 20  
+   44  00:77DD  11 79     	.dw	msg04		; orig $790E
+   45                     
+   46  00:77DF            msgptr05:	; Very Nice !
+   47  00:77DF  04 0C 04  	.db	$04,$0C,$04,$04,$01,$20
+       00:77E2  04 01 20  
+   48  00:77E5  17 79     	.dw	msg05		; orig $7917
+   49                     
+   50  00:77E7            msgptr06:	; Would you like to buy it ?
+   51                     ;	.db	$0D,$0C,$03,$04,$02,$20
+   52  00:77E7  02 0C 0B  	.db	$02,$0C,$0B,$04,$02,$20
+       00:77EA  04 02 20  
+   53  00:77ED  23 79     	.dw	msg06		; orig $7924
+   54                     
+   55  00:77EF            msgptr07:	; I don't have enough
+   56                     ;	.db	$03,$0C,$06,$04,$01,$20
+   57  00:77EF  04 0C 08  	.db	$04,$0C,$08,$04,$01,$20
+       00:77F2  04 01 20  
+   58  00:77F5  3E 79     	.dw	msg07		; orig $792E
+   59                     
+   60  00:77F7            msgptr08:	; .....
+   61  00:77F7  0D 0C 03  	.db	$0D,$0C,$03,$04,$02,$20
+       00:77FA  04 02 20  
+   62  00:77FD  53 79     	.dw	msg08		; orig $793E
+   63                     
+   64  00:77FF            msgptr09:	; Another item perhaps ?
+   65                     ;	.db	$0C,$0C,$05,$04,$02,$20
+   66  00:77FF  03 0C 0A  	.db	$03,$0C,$0A,$04,$02,$20
+       00:7802  04 02 20  
+   67  00:7805  5E 79     	.dw	msg09		; orig $7949
+   68                     
+   69  00:7807            msgptr10:	; Come again !
+   70                     ;	.db	$0E,$0C,$02,$04,$02,$40
+   71  00:7807  0E 0C 04  	.db	$0E,$0C,$04,$04,$02,$40
+       00:780A  04 02 40  
+   72  00:780D  75 79     	.dw	msg10		; orig $7956
+   73                     
+   74  00:780F            msgptr11:	; Thank you !
+   75  00:780F  0C 0C 04  	.db	$0C,$0C,$04,$04,$02,$20
+       00:7812  04 02 20  
+   76  00:7815  82 79     	.dw	msg11		; orig $795F
+   77                     
+   78  00:7817            msgptr12:	; I'll have it delivered.
+   79                     ;	.db	$0A,$0C,$08,$04,$02,$20
+   80  00:7817  03 0C 0A  	.db	$03,$0C,$0A,$04,$02,$20
+       00:781A  04 02 20  
+   81  00:781D  8E 79     	.dw	msg12		; orig $796B
+   82                     
+   83  00:781F            msgptr13:	; That's an Orange Crate.
+   84                     ;	.db	$0C,$0C,$05,$04,$02,$20
+   85  00:781F  05 0C 0A  	.db	$05,$0C,$0A,$04,$02,$20
+       00:7822  04 02 20  
+   86  00:7825  A6 79     	.dw	msg13		; orig $797E
+   87                     
+   88  00:7827            msgptr14:	; This is a Basic Table.
+   89                     ;	.db	$0C,$0C,$05,$04,$02,$20
+   90  00:7827  05 0C 09  	.db	$05,$0C,$09,$04,$02,$20
+       00:782A  04 02 20  
+   91  00:782D  BE 79     	.dw	msg14		; orig $798C
+   92                     
+   93  00:782F            msgptr15:	; How about a Fancy Table ?
+   94                     ;	.db	$0C,$0C,$05,$04,$02,$20
+   95  00:782F  04 0C 0B  	.db	$04,$0C,$0B,$04,$02,$20
+       00:7832  04 02 20  
+   96  00:7835  D5 79     	.dw	msg15		; orig $799A
+   97                     
+   98  00:7837            msgptr16:	; That's a Futon.
+   99                     ;	.db	$0C,$0C,$07,$04,$02,$20
+  100  00:7837  07 0C 06  	.db	$07,$0C,$06,$04,$02,$20
+       00:783A  04 02 20  
+  101  00:783D  EF 79     	.dw	msg16		; orig $79A7
+  102                     
+  103  00:783F            msgptr17:	; This is a Hammock.
+  104                     ;	.db	$0C,$0C,$07,$04,$02,$20
+  105  00:783F  06 0C 07  	.db	$06,$0C,$07,$04,$02,$20
+       00:7842  04 02 20  
+  106  00:7845  FF 79     	.dw	msg17		; orig $79B3
+  107                     
+  108  00:7847            msgptr18:	; How about a Bed ?
+  109                     ;	.db	$0C,$0C,$07,$04,$02,$20
+  110  00:7847  06 0C 07  	.db	$06,$0C,$07,$04,$02,$20
+       00:784A  04 02 20  
+  111  00:784D  12 7A     	.dw	msg18		; orig $79C1
+  112                     
+  113  00:784F            msgptr19:	; That's a Snowman.
+  114                     ;	.db	$0C,$0C,$07,$04,$02,$20
+  115  00:784F  06 0C 07  	.db	$06,$0C,$07,$04,$02,$20
+       00:7852  04 02 20  
+  116  00:7855  24 7A     	.dw	msg19		; orig $79CD
+  117                     
+  118  00:7857            msgptr20:	; This is a Sunflower.
+  119                     ;	.db	$0C,$0C,$07,$04,$02,$20
+  120  00:7857  06 0C 09  	.db	$06,$0C,$09,$04,$02,$20
+       00:785A  04 02 20  
+  121  00:785D  36 7A     	.dw	msg20		; orig $79DB
+  122                     
+  123  00:785F            msgptr21:	; How about a Tanuki Statue ?
+  124                     ;	.db	$0C,$0C,$07,$04,$02,$20
+  125  00:785F  02 0C 0C  	.db	$02,$0C,$0C,$04,$02,$20
+       00:7862  04 02 20  
+  126  00:7865  4B 7A     	.dw	msg21		; orig $79E8
+  127                     
+  128  00:7867            msgptr22:	; That's a Lantern.
+  129                     ;	.db	$0C,$0C,$07,$04,$02,$20
+  130  00:7867  06 0C 07  	.db	$06,$0C,$07,$04,$02,$20
+       00:786A  04 02 20  
+  131  00:786D  67 7A     	.dw	msg22		; orig $79F9
+  132                     
+  133  00:786F            msgptr23:	; This is a Ceiling Light.
+  134                     ;	.db	$0C,$0C,$07,$04,$02,$20
+  135  00:786F  03 0C 0A  	.db	$03,$0C,$0A,$04,$02,$20
+       00:7872  04 02 20  
+  136  00:7875  79 7A     	.dw	msg23		; orig $7A07
+  137                     
+  138  00:7877            msgptr24:	; How about a Chandelier ?
+  139                     ;	.db	$0C,$0C,$07,$04,$02,$20
+  140  00:7877  03 0C 0A  	.db	$03,$0C,$0A,$04,$02,$20
+       00:787A  04 02 20  
+  141  00:787D  92 7A     	.dw	msg24		; orig $7A16
+  142                     
+  143  00:787F            msgptr25:	; Those are Dog Curtains.
+  144                     ;	.db	$0A,$0C,$08,$04,$02,$20
+  145  00:787F  03 0C 0A  	.db	$03,$0C,$0A,$04,$02,$20
+       00:7882  04 02 20  
+  146  00:7885  50 7C     	.dw	msg25		; orig $7A25
+  147                     
+  148  00:7887            msgptr26:	; This is a Noren.
+  149                     ;	.db	$0C,$0C,$07,$04,$02,$20
+  150  00:7887  06 0C 06  	.db	$06,$0C,$06,$04,$02,$20
+       00:788A  04 02 20  
+  151  00:788D  68 7C     	.dw	msg26		; orig $7A39
+  152                     
+  153  00:788F            msgptr27:	; How about Banana Curtains ?
+  154                     ;	.db	$0A,$0C,$08,$04,$02,$20
+  155  00:788F  02 0C 0C  	.db	$02,$0C,$0C,$04,$02,$20
+       00:7892  04 02 20  
+  156  00:7895  79 7C     	.dw	msg27		; orig $7A45
+  157                     
+  158  00:7897            msgptr28:	; That's a Straw Mat.
+  159                     ;	.db	$0C,$0C,$07,$04,$02,$20
+  160  00:7897  06 0C 08  	.db	$06,$0C,$08,$04,$02,$20
+       00:789A  04 02 20  
+  161  00:789D  95 7C     	.dw	msg28		; orig $7A5A
+  162                     
+  163  00:789F            msgptr29:	; This is a Cushion.
+  164                     ;	.db	$0C,$0C,$07,$04,$02,$20
+  165  00:789F  06 0C 07  	.db	$06,$0C,$07,$04,$02,$20
+       00:78A2  04 02 20  
+  166  00:78A5  A9 7C     	.dw	msg29		; orig $7A65
+  167                     
+  168  00:78A7            msgptr30:	; How about a Chair ?
+  169                     ;	.db	$0C,$0C,$07,$04,$02,$20
+  170  00:78A7  06 0C 08  	.db	$06,$0C,$08,$04,$02,$20
+       00:78AA  04 02 20  
+  171  00:78AD  BC 7C     	.dw	msg30		; orig $7A72
+  172                     
+  173  00:78AF            msgptr31:	; That's a Portable Stereo.
+  174                     ;	.db	$0C,$0C,$07,$04,$02,$20
+  175  00:78AF  03 0C 0B  	.db	$03,$0C,$0B,$04,$02,$20
+       00:78B2  04 02 20  
+  176  00:78B5  D0 7C     	.dw	msg31		; orig $7A7D
+  177                     
+  178  00:78B7            msgptr32:	; This is a Television.
+  179                     ;	.db	$0C,$0C,$07,$04,$02,$20
+  180  00:78B7  05 0C 09  	.db	$05,$0C,$09,$04,$02,$20
+       00:78BA  04 02 20  
+  181  00:78BD  EA 7C     	.dw	msg32		; orig $7A8A
+  182                     
+  183  00:78BF            msgptr33:	; How about a Computer ?
+  184                     ;	.db	$0C,$0C,$07,$04,$02,$20
+  185  00:78BF  03 0C 0A  	.db	$03,$0C,$0A,$04,$02,$20
+       00:78C2  04 02 20  
+  186  00:78C5  00 7D     	.dw	msg33		; orig $7A96
+  187                     
+  188  00:78C7            msgptr34:	; That's a Tin-Can Phone.
+  189                     ;	.db	$0C,$0C,$07,$04,$02,$20
+  190  00:78C7  03 0C 0A  	.db	$03,$0C,$0A,$04,$02,$20
+       00:78CA  04 02 20  
+  191  00:78CD  17 7D     	.dw	msg34		; orig $7AA3
+  192                     
+  193  00:78CF            msgptr35:	; This is a Rotary Phone.
+  194                     ;	.db	$0C,$0C,$07,$04,$02,$20
+  195  00:78CF  03 0C 0A  	.db	$03,$0C,$0A,$04,$02,$20
+       00:78D2  04 02 20  
+  196  00:78D5  2F 7D     	.dw	msg35		; orig $7AB1
+  197                     
+  198  00:78D7            msgptr36:	; How about a Cellphone ?
+  199                     ;	.db	$0C,$0C,$07,$04,$02,$20
+  200  00:78D7  03 0C 0A  	.db	$03,$0C,$0A,$04,$02,$20
+       00:78DA  04 02 20  
+  201  00:78DD  47 7D     	.dw	msg36		; orig $7ABF
+  202                     
+  203                     
+  204                     
+  205                     ; Now for the messages - space is good until $7ADF
+  206                     ; After that, if more space is needed, start at $7C50
+  207                     
+  208           78DF      	.org	$78DF
+  209  00:78DF            msg01:	; irasshaimase kaimonodesuka ?
+  210                     	; May I help you ?
+  211                     ;	.db	$01,$43,$8D,$0B,$8A,$01,$2E,$0D
+  212                     ;	.db	$4E,$05,$01,$42,$28,$6D,$0C,$05
+  213                     ;	.db	$8E
+  214                     ;	.db	$FF
+  215  00:78DF  0D 61 89  	.db	cM,lA,lY,spc,cI,spc,lH,lE
+       00:78E2  4E 09 4E  
+       00:78E5  68 65     
+  216  00:78E7  6C 80 4E  	.db	lL,lP,spc,lY,lO,lU,spc
+       00:78EA  89 6F 85  
+       00:78ED  4E        
+  217  00:78EE  8E        	.db	qust
+  218  00:78EF  FF        	.db	$FF
+  219                     
+  220  00:78F0            msg02:	; Nanika utte hoshii degozaru
+  221                     	; What do you have today ?
+  222                     ;	.db	$24,$25,$05,$4E,$02,$8D,$22,$4E
+  223                     ;	.db	$2D,$0B,$01,$6D,$64,$65,$89,$45
+  224                     ;	.db	$FF
+  225  00:78F0  27 68 61  	.db	cW,lH,lA,lT,spc,lD,lO
+       00:78F3  84 4E 64  
+       00:78F6  6F        
+  226  00:78F7  4E 89 6F  	.db	spc,lY,lO,lU,spc,lH,lA,lV,lE,spc
+       00:78FA  85 4E 68  
+       00:78FD  61 86 65  
+       00:7900  4E        
+  227  00:7901  84 6F 64  	.db	lT,lO,lD,lA,lY,spc
+       00:7904  61 89 4E  
+  228  00:7907  8E        	.db	qust
+  229  00:7908  FF        	.db	$FF
+  230                     
+  231  00:7909            msg03:	; Hoshikunai de gozaru
+  232                     	; Hmmm...
+  233                     ;	.db	$2D,$0B,$07,$24,$01,$4F,$6D,$64
+  234                     ;	.db	$65,$89,$45
+  235                     ;	.db	$FF
+  236  00:7909  08 6D 6D  	.db	cH,lM,lM,lM,perid,perid,perid
+       00:790C  6D 2B 2B  
+       00:790F  2B        
+  237  00:7910  FF        	.db	$FF
+  238                     
+  239  00:7911            msg04:	; Hoshii degozaru
+  240                     	; Nice.
+  241                     ;	.db	$2D,$0B,$01,$6D,$64,$65,$89,$45
+  242                     ;	.db	$FF
+  243  00:7911  0E 69 63  	.db	cN,lI,lC,lE,perid
+       00:7914  65 2B     
+  244  00:7916  FF        	.db	$FF
+  245                     
+  246  00:7917            msg05:	; sugokuhoshii! degozaru
+  247                     	; Very Nice !
+  248                     ;	.db	$0C,$64,$07,$2D,$0B,$01,$8F,$6D
+  249                     ;	.db	$64,$65,$89,$45
+  250                     ;	.db	$FF
+  251  00:7917  26 65 82  	.db	cV,lE,lR,lY,spc,cN,lI,lC,lE,spc,excl
+       00:791A  89 4E 0E  
+       00:791D  69 63 65  
+       00:7920  4E 8F     
+  252  00:7922  FF        	.db	$FF
+  253                     
+  254  00:7923            msg06:	; kordeiidesuka?
+  255                     	; Would you like to buy it ?
+  256                     ;	.db	$09,$46,$6D,$01,$01,$6D,$0C,$05
+  257                     ;	.db	$8E
+  258                     ;	.db	$FF
+  259  00:7923  27 6F 85  	.db	cW,lO,lU,lL,lD,spc,lY,lO,lU,spc
+       00:7926  6C 64 4E  
+       00:7929  89 6F 85  
+       00:792C  4E        
+  260  00:792D  6C 69 6B  	.db	lL,lI,lK,lE,spc,lT,lO,spc
+       00:7930  65 4E 84  
+       00:7933  6F 4E     
+  261  00:7935  62 85 89  	.db	lB,lU,lY,spc,lI,lT,spc
+       00:7938  4E 69 84  
+       00:793B  4E        
+  262  00:793C  8E        	.db	qust
+  263  00:793D  FF        	.db	$FF
+  264                     
+  265  00:793E            msg07:	; tarinai! zannendegozaru
+  266                     	; I don't have enough.
+  267                     ;	.db	$0F,$44,$24,$01,$8F,$4E,$65,$4D
+  268                     ;	.db	$27,$4D,$6D,$64,$65,$89,$45
+  269                     ;	.db	$FF
+  270  00:793E  09 4E 64  	.db	cI,spc,lD,lO,lN,apost,lT,spc
+       00:7941  6F 6E 2C  
+       00:7944  84 4E     
+  271  00:7946  68 61 86  	.db	lH,lA,lV,lE,spc,lE,lN,lO,lU,lG,lH,perid
+       00:7949  65 4E 65  
+       00:794C  6E 6F 85  
+       00:794F  67 68 2B  
+  272                     ;	.db	lM,lO,lN,lE,lY
+  273  00:7952  FF        	.db	$FF
+  274                     
+  275  00:7953            msg08:	; ....
+  276                     ;	.db	$4F,$4F,$4F,$4F,$4F,$4F,$4F,$4F
+  277                     ;	.db	$4F,$4F
+  278                     ;	.db	$FF
+  279  00:7953  2B 2B 2B  	.db	perid,perid,perid,perid,perid,perid,perid,perid
+       00:7956  2B 2B 2B  
+       00:7959  2B 2B     
+  280  00:795B  2B 2B     	.db	perid,perid
+  281  00:795D  FF        	.db	$FF
+  282                     
+  283  00:795E            msg09:	; kaimonowotsudzukemasuka?
+  284                     	; Another item perhaps ?
+  285                     ;	.db	$05,$01,$42,$28,$4C,$21,$6C,$08
+  286                     ;	.db	$2E,$0C,$05,$8E
+  287                     ;	.db	$FF
+  288  00:795E  01 6E 6F  	.db	cA,lN,lO,lT,lH,lE,lR,spc
+       00:7961  84 68 65  
+       00:7964  82 4E     
+  289  00:7966  69 84 65  	.db	lI,lT,lE,lM,spc
+       00:7969  6D 4E     
+  290  00:796B  80 65 82  	.db	lP,lE,lR,lH,lA,lP,lS
+       00:796E  68 61 80  
+       00:7971  83        
+  291  00:7972  4E 8E     	.db	spc,qust
+  292  00:7974  FF        	.db	$FF
+  293                     
+  294  00:7975            msg10:	; matakitekudasai
+  295                     	; Come again !
+  296                     ;	.db	$2E,$0F,$06,$22,$07,$6A,$0A,$01
+  297                     ;	.db	$FF
+  298  00:7975  03 6F 6D  	.db	cC,lO,lM,lE,spc
+       00:7978  65 4E     
+  299  00:797A  61 67 61  	.db	lA,lG,lA,lI,lN,spc,excl
+       00:797D  69 6E 4E  
+       00:7980  8F        
+  300  00:7981  FF        	.db	$FF
+  301                     
+  302  00:7982            msg11:	; arigatougozaimashita
+  303                     	; Thank You !
+  304                     ;	.db	$00,$44,$60,$23,$02,$64,$65,$01
+  305                     ;	.db	$2E,$0B,$0F
+  306                     ;	.db	$FF
+  307  00:7982  24 68 61  	.db	cT,lH,lA,lN,lK,spc
+       00:7985  6E 6B 4E  
+  308  00:7988  29 6F 85  	.db	cY,lO,lU,spc,excl
+       00:798B  4E 8F     
+  309  00:798D  FF        	.db	$FF
+  310                     
+  311  00:798E            msg12:	; shinamonohaieni okutteokimasune
+  312                     	; I'll have it delivered.
+  313                     ;	.db	$0B,$24,$42,$28,$29,$01,$03,$25
+  314                     ;	.db	$4E,$04,$07,$8D,$22,$04,$06,$2E
+  315                     ;	.db	$0C,$27
+  316                     ;	.db	$FF
+  317  00:798E  09 2C 6C  	.db	cI,apost,lL,lL,spc,lH,lA,lV,lE,spc
+       00:7991  6C 4E 68  
+       00:7994  61 86 65  
+       00:7997  4E        
+  318  00:7998  69 84 4E  	.db	lI,lT,spc,lD,lE,lL,lI,lV,lE,lR,lE,lD
+       00:799B  64 65 6C  
+       00:799E  69 86 65  
+       00:79A1  82 65 64  
+  319  00:79A4  2B        	.db	perid
+  320  00:79A5  FF        	.db	$FF
+  321                     
+  322  00:79A6            msg13:	; mikanbakoha douesuka?
+  323                     	; That's an orange crate.
+  324                     ;	.db	$2F,$05,$4D,$6F,$09,$29,$4E,$6E
+  325                     ;	.db	$02,$6D,$0C,$05,$8E
+  326                     ;	.db	$FF
+  327  00:79A6  24 68 61  	.db	cT,lH,lA,lT,apost,lS,spc,lA,lN,spc
+       00:79A9  84 2C 83  
+       00:79AC  4E 61 6E  
+       00:79AF  4E        
+  328  00:79B0  0F 82 61  	.db	cO,lR,lA,lN,lG,lE,spc
+       00:79B3  6E 67 65  
+       00:79B6  4E        
+  329  00:79B7  03 82 61  	.db	cC,lR,lA,lT,lE
+       00:79BA  84 65     
+  330  00:79BC  2B        	.db	perid
+  331  00:79BD  FF        	.db	$FF
+  332                     
+  333  00:79BE            msg14:	; chabudaiha doudesuka?
+  334                     	; This is a Basic table.
+  335                     ;	.db	$20,$8A,$81,$6A,$01,$29,$4E,$6E
+  336                     ;	.db	$02,$6D,$0C,$05,$8E
+  337                     ;	.db	$FF
+  338  00:79BE  24 68 69  	.db	cT,lH,lI,lS,spc,lI,lS,spc,lA,spc
+       00:79C1  83 4E 69  
+       00:79C4  83 4E 61  
+       00:79C7  4E        
+  339  00:79C8  02 61 83  	.db	cB,lA,lS,lI,lC,spc
+       00:79CB  69 63 4E  
+  340  00:79CE  24 61 62  	.db	cT,lA,lB,lL,lE
+       00:79D1  6C 65     
+  341  00:79D3  2B        	.db	perid
+  342  00:79D4  FF        	.db	$FF
+  343                     
+  344  00:79D5            msg15:	; te-buruha doudeska?
+  345                     	; How about a Fancy table ?
+  346                     ;	.db	$22,$89,$81,$45,$29,$4E,$6E,$02
+  347                     ;	.db	$6D,$0C,$05,$8E
+  348                     ;	.db	$FF
+  349  00:79D5  08 6F 87  	.db	cH,lO,lW,spc,lA,lB,lO,lU,lT,spc,lA,spc
+       00:79D8  4E 61 62  
+       00:79DB  6F 85 84  
+       00:79DE  4E 61 4E  
+  350  00:79E1  06 61 6E  	.db	cF,lA,lN,lC,lY,spc
+       00:79E4  63 89 4E  
+  351  00:79E7  24 61 62  	.db	cT,lA,lB,lL,lE
+       00:79EA  6C 65     
+  352  00:79EC  4E 8E     	.db	spc,qust
+  353  00:79EE  FF        	.db	$FF
+  354                     
+  355  00:79EF            msg16:	; futonha doudesuka?
+  356                     	; That's a Futon.
+  357                     ;	.db	$2B,$23,$4D,$29,$4E,$6E,$02,$6D
+  358                     ;	.db	$0C,$05,$8E
+  359                     ;	.db	$FF
+  360  00:79EF  24 68 61  	.db	cT,lH,lA,lT,apost,lS,spc,lA,spc
+       00:79F2  84 2C 83  
+       00:79F5  4E 61 4E  
+  361  00:79F8  06 85 84  	.db	cF,lU,lT,lO,lN
+       00:79FB  6F 6E     
+  362  00:79FD  2B        	.db	perid
+  363  00:79FE  FF        	.db	$FF
+  364                     
+  365  00:79FF            msg17:	; hanmokkuha doudesuka?
+  366                     	; This is a Hammock.
+  367                     ;	.db	$29,$4D,$42,$8D,$07,$29,$4E,$6E
+  368                     ;	.db	$02,$6D,$0C,$05,$8E
+  369                     ;	.db	$FF
+  370  00:79FF  24 68 69  	.db	cT,lH,lI,lS,spc,lI,lS,spc,lA,spc
+       00:7A02  83 4E 69  
+       00:7A05  83 4E 61  
+       00:7A08  4E        
+  371  00:7A09  08 61 6D  	.db	cH,lA,lM,lM,lO,lC,lK
+       00:7A0C  6D 6F 63  
+       00:7A0F  6B        
+  372  00:7A10  2B        	.db	perid
+  373  00:7A11  FF        	.db	$FF
+  374                     
+  375  00:7A12            msg18:	; beddoha doudesuka?
+  376                     	; How about a bed ?
+  377                     ;	.db	$82,$8D,$6E,$29,$4E,$6E,$02,$6D
+  378                     ;	.db	$0C,$05,$8E
+  379                     ;	.db	$FF
+  380  00:7A12  08 6F 87  	.db	cH,lO,lW,spc,lA,lB,lO,lU,lT,spc,lA,spc
+       00:7A15  4E 61 62  
+       00:7A18  6F 85 84  
+       00:7A1B  4E 61 4E  
+  381  00:7A1E  02 65 64  	.db	cB,lE,lD
+  382  00:7A21  4E 8E     	.db	spc,qust
+  383  00:7A23  FF        	.db	$FF
+  384                     
+  385  00:7A24            msg19:	; yukidarumaha doudesuka?
+  386                     	; That's a Snowman.
+  387                     ;	.db	$49,$06,$6A,$45,$2E,$29,$4E,$6E
+  388                     ;	.db	$02,$6D,$0C,$05,$8E
+  389                     ;	.db	$FF
+  390  00:7A24  24 68 61  	.db	cT,lH,lA,lT,apost,lS,spc,lA,spc
+       00:7A27  84 2C 83  
+       00:7A2A  4E 61 4E  
+  391  00:7A2D  23 6E 6F  	.db	cS,lN,lO,lW,lM,lA,lN
+       00:7A30  87 6D 61  
+       00:7A33  6E        
+  392  00:7A34  2B        	.db	perid
+  393  00:7A35  FF        	.db	$FF
+  394                     
+  395  00:7A36            msg20:	; himawariha doudesuka?
+  396                     	; This is a Sunflower.
+  397                     ;	.db	$2A,$2E,$4B,$44,$29,$4E,$6E,$02
+  398                     ;	.db	$6D,$0C,$05,$8E
+  399                     ;	.db	$FF
+  400  00:7A36  24 68 69  	.db	cT,lH,lI,lS,spc,lI,lS,spc,lA,spc
+       00:7A39  83 4E 69  
+       00:7A3C  83 4E 61  
+       00:7A3F  4E        
+  401  00:7A40  23 85 6E  	.db	cS,lU,lN,lF,lL,lO,lW,lE,lR
+       00:7A43  66 6C 6F  
+       00:7A46  87 65 82  
+  402  00:7A49  2B        	.db	perid
+  403  00:7A4A  FF        	.db	$FF
+  404                     
+  405  00:7A4B            msg21:	; tanukinookimonoha doudesuka
+  406                     	; How about a Tanuki Statue ?
+  407                     ;	.db	$0F,$26,$06,$28,$04,$06,$42,$28
+  408                     ;	.db	$29,$4E,$6E,$02,$6D,$0C,$05,$8E
+  409                     ;	.db	$FF
+  410  00:7A4B  08 6F 87  	.db	cH,lO,lW,spc,lA,lB,lO,lU,lT,spc,lA,spc
+       00:7A4E  4E 61 62  
+       00:7A51  6F 85 84  
+       00:7A54  4E 61 4E  
+  411  00:7A57  24 61 6E  	.db	cT,lA,lN,lU,lK,lI,spc
+       00:7A5A  85 6B 69  
+       00:7A5D  4E        
+  412  00:7A5E  23 84 61  	.db	cS,lT,lA,lT,lU,lE
+       00:7A61  84 85 65  
+  413  00:7A64  4E 8E     	.db	spc,qust
+  414  00:7A66  FF        	.db	$FF
+  415                     
+  416  00:7A67            msg22:	; chouchinha doudesuka?
+  417                     	; That's a Lantern.
+  418                     ;	.db	$20,$8C,$02,$20,$4D,$29,$4E,$6E
+  419                     ;	.db	$02,$6D,$0C,$05,$8E
+  420                     ;	.db	$FF
+  421  00:7A67  24 68 61  	.db	cT,lH,lA,lT,apost,lS,spc,lA,spc
+       00:7A6A  84 2C 83  
+       00:7A6D  4E 61 4E  
+  422  00:7A70  0C 61 6E  	.db	cL,lA,lN,lT,lE,lR,lN
+       00:7A73  84 65 82  
+       00:7A76  6E        
+  423  00:7A77  2B        	.db	perid
+  424  00:7A78  FF        	.db	$FF
+  425                     
+  426  00:7A79            msg23:	; keikoutouha doudesuka?
+  427                     	; This is a Ceiling Light.
+  428                     ;	.db	$08,$01,$09,$02,$23,$02,$29,$4E
+  429                     ;	.db	$6E,$02,$6D,$0C,$05,$8E
+  430                     ;	.db	$FF
+  431  00:7A79  24 68 69  	.db	cT,lH,lI,lS,spc,lI,lS,spc,lA,spc
+       00:7A7C  83 4E 69  
+       00:7A7F  83 4E 61  
+       00:7A82  4E        
+  432  00:7A83  03 65 69  	.db	cC,lE,lI,lL,lI,lN,lG,spc
+       00:7A86  6C 69 6E  
+       00:7A89  67 4E     
+  433  00:7A8B  0C 69 67  	.db	cL,lI,lG,lH,lT
+       00:7A8E  68 84     
+  434  00:7A90  2B        	.db	perid
+  435  00:7A91  FF        	.db	$FF
+  436                     
+  437  00:7A92            msg24:	; shanderiaha doudesuka?
+  438                     	; How about a Chandelier ?
+  439                     ;	.db	$0B,$8A,$4D,$6D,$44,$00,$29,$4E
+  440                     ;	.db	$6E,$02,$6D,$0C,$05,$8E
+  441                     ;	.db	$FF
+  442  00:7A92  08 6F 87  	.db	cH,lO,lW,spc,lA,lB,lO,lU,lT,spc,lA,spc
+       00:7A95  4E 61 62  
+       00:7A98  6F 85 84  
+       00:7A9B  4E 61 4E  
+  443  00:7A9E  03 68 61  	.db	cC,lH,lA,lN,lD,lE,lL,lI,lE,lR
+       00:7AA1  6E 64 65  
+       00:7AA4  6C 69 65  
+       00:7AA7  82        
+  444  00:7AA8  4E 8E     	.db	spc,qust
+  445  00:7AAA  FF        	.db	$FF
+  446                     
+  447                     ; move some messages into the empty space at the end
+  448                     ; (just in case)
+  449                     
+  450           7C50      	.ORG	$7C50
+  451                     
+  452  00:7C50            msg25:	; burunonoyounoka-tenha doudesuka?
+  453                     	; Those are Dog Curtains.
+  454                     ;	.db	$81,$45,$28,$42,$4A,$02,$28,$05
+  455                     ;	.db	$89,$22,$4D,$29,$4E,$6E,$02,$6D
+  456                     ;	.db	$0C,$05,$8E
+  457  00:7C50  24 68 6F  	.db	cT,lH,lO,lS,lE,spc,lA,lR,lE,spc
+       00:7C53  83 65 4E  
+       00:7C56  61 82 65  
+       00:7C59  4E        
+  458  00:7C5A  04 6F 67  	.db	cD,lO,lG,spc
+       00:7C5D  4E        
+  459  00:7C5E  03 85 82  	.db	cC,lU,lR,lT,lA,lI,lN,lS
+       00:7C61  84 61 69  
+       00:7C64  6E 83     
+  460  00:7C66  2B        	.db	perid
+  461  00:7C67  FF        	.db	$FF
+  462                     
+  463  00:7C68            msg26:	; norenha doudesuka
+  464                     	; This is a Noren.
+  465                     ;	.db	$28,$46,$4D,$29,$4E,$6E,$02,$6D
+  466                     ;	.db	$0C,$05,$8E
+  467                     ;	.db	$FF
+  468  00:7C68  24 68 69  	.db	cT,lH,lI,lS,spc,lI,lS,spc,lA,spc
+       00:7C6B  83 4E 69  
+       00:7C6E  83 4E 61  
+       00:7C71  4E        
+  469  00:7C72  0E 6F 82  	.db	cN,lO,lR,lE,lN
+       00:7C75  65 6E     
+  470  00:7C77  2B        	.db	perid
+  471  00:7C78  FF        	.db	$FF
+  472                     
+  473  00:7C79            msg27:	; banananomoyounoka-tenha doudesuka
+  474                     	; How about Banana Curtains ?
+  475                     ;	.db	$6F,$24,$24,$28,$42,$4A,$02,$28
+  476                     ;	.db	$05,$89,$22,$4D,$29,$4E,$6E,$02
+  477                     ;	.db	$6D,$0C,$05,$8E
+  478  00:7C79  08 6F 87  	.db	cH,lO,lW,spc,lA,lB,lO,lU,lT,spc
+       00:7C7C  4E 61 62  
+       00:7C7F  6F 85 84  
+       00:7C82  4E        
+  479  00:7C83  02 61 6E  	.db	cB,lA,lN,lA,lN,lA,spc
+       00:7C86  61 6E 61  
+       00:7C89  4E        
+  480  00:7C8A  03 85 82  	.db	cC,lU,lR,lT,lA,lI,lN,lS
+       00:7C8D  84 61 69  
+       00:7C90  6E 83     
+  481  00:7C92  4E 8E     	.db	spc,qust
+  482  00:7C94  FF        	.db	$FF
+  483                     
+  484  00:7C95            msg28:	; gozaha doudesuka?
+  485                     	; That's a Straw Mat.
+  486                     ;	.db	$64,$65,$29,$4E,$6E,$02,$6D,$0C
+  487                     ;	.db	$05,$8E
+  488                     ;	.db	$FF
+  489  00:7C95  24 68 61  	.db	cT,lH,lA,lT,apost,lS,spc,lA,spc
+       00:7C98  84 2C 83  
+       00:7C9B  4E 61 4E  
+  490  00:7C9E  23 84 82  	.db	cS,lT,lR,lA,lW,spc
+       00:7CA1  61 87 4E  
+  491  00:7CA4  0D 61 84  	.db	cM,lA,lT
+  492  00:7CA7  2B        	.db	perid
+  493  00:7CA8  FF        	.db	$FF
+  494                     
+  495  00:7CA9            msg29:	; zabutonha doudesuka
+  496                     	; This is a Cushion.
+  497                     ;	.db	$65,$81,$23,$4D,$29,$4E,$6E,$02
+  498                     ;	.db	$6D,$0C,$05,$8E
+  499                     ;	.db	$FF
+  500  00:7CA9  24 68 69  	.db	cT,lH,lI,lS,spc,lI,lS,spc,lA,spc
+       00:7CAC  83 4E 69  
+       00:7CAF  83 4E 61  
+       00:7CB2  4E        
+  501  00:7CB3  03 85 83  	.db	cC,lU,lS,lH,lI,lO,lN
+       00:7CB6  68 69 6F  
+       00:7CB9  6E        
+  502  00:7CBA  2B        	.db	perid
+  503  00:7CBB  FF        	.db	$FF
+  504                     
+  505  00:7CBC            msg30:	; isuha doudesuka
+  506                     	; How about a Chair ?
+  507                     ;	.db	$01,$0C,$29,$4E,$6E,$02,$6D,$0C
+  508                     ;	.db	$05,$8E
+  509                     ;	.db	$FF
+  510  00:7CBC  08 6F 87  	.db	cH,lO,lW,spc,lA,lB,lO,lU,lT,spc,lA,spc
+       00:7CBF  4E 61 62  
+       00:7CC2  6F 85 84  
+       00:7CC5  4E 61 4E  
+  511  00:7CC8  03 68 61  	.db	cC,lH,lA,lI,lR
+       00:7CCB  69 82     
+  512  00:7CCD  4E 8E     	.db	spc,qust
+  513  00:7CCF  FF        	.db	$FF
+  514                     
+  515  00:7CD0            msg31:	; rajikaseha doudesuka
+  516                     	; That's a Portable Stereo.
+  517                     ;	.db	$43,$66,$05,$0D,$29,$4E,$6E,$02
+  518                     ;	.db	$6D,$0C,$05,$8E
+  519                     ;	.db	$FF
+  520  00:7CD0  24 68 61  	.db	cT,lH,lA,lT,apost,lS,spc,lA,spc
+       00:7CD3  84 2C 83  
+       00:7CD6  4E 61 4E  
+  521  00:7CD9  20 6F 82  	.db	cP,lO,lR,lT,lA,lB,lL,lE
+       00:7CDC  84 61 62  
+       00:7CDF  6C 65     
+  522  00:7CE1  4E 23 84  	.db	spc,cS,lT,lE,lR,lE,lO
+       00:7CE4  65 82 65  
+       00:7CE7  6F        
+  523  00:7CE8  2B        	.db	perid
+  524  00:7CE9  FF        	.db	$FF
+  525                     
+  526  00:7CEA            msg32:	; terebiha doudesuka
+  527                     	; This is a Television.
+  528                     ;	.db	$22,$46,$80,$29,$4E,$6E,$02,$6D
+  529                     ;	.db	$0C,$05,$8E
+  530                     ;	.db	$FF
+  531  00:7CEA  24 68 69  	.db	cT,lH,lI,lS,spc,lI,lS,spc,lA,spc
+       00:7CED  83 4E 69  
+       00:7CF0  83 4E 61  
+       00:7CF3  4E        
+  532  00:7CF4  24 65 6C  	.db	cT,lE,lL,lE,lV,lI,lS,lI,lO,lN
+       00:7CF7  65 86 69  
+       00:7CFA  83 69 6F  
+       00:7CFD  6E        
+  533  00:7CFE  2B        	.db	perid
+  534  00:7CFF  FF        	.db	$FF
+  535                     
+  536  00:7D00            msg33:	; pasokonha doudesuka?
+  537                     	; How about a Computer ?
+  538                     ;	.db	$84,$0E,$09,$4D,$29,$4E,$6E,$02
+  539                     ;	.db	$6D,$0C,$05,$8E
+  540                     ;	.db	$FF
+  541  00:7D00  08 6F 87  	.db	cH,lO,lW,spc,lA,lB,lO,lU,lT,spc,lA,spc
+       00:7D03  4E 61 62  
+       00:7D06  6F 85 84  
+       00:7D09  4E 61 4E  
+  542  00:7D0C  03 6F 6D  	.db	cC,lO,lM,lP,lU,lT,lE,lR
+       00:7D0F  80 85 84  
+       00:7D12  65 82     
+  543  00:7D14  4E 8E     	.db	spc,qust
+  544  00:7D16  FF        	.db	$FF
+  545                     
+  546  00:7D17            msg34:	; itodenha doudesuka?
+  547                     	; That's a Tin-Can Phone.
+  548                     ;	.db	$01,$23,$6D,$4D,$4B,$29,$4E,$6E
+  549                     ;	.db	$02,$6D,$0C,$05,$8E
+  550                     ;	.db	$FF
+  551  00:7D17  24 68 61  	.db	cT,lH,lA,lT,apost,lS,spc,lA,spc
+       00:7D1A  84 2C 83  
+       00:7D1D  4E 61 4E  
+  552  00:7D20  24 69 6E  	.db	cT,lI,lN,dash,cC,lA,lN,spc
+       00:7D23  8B 03 61  
+       00:7D26  6E 4E     
+  553  00:7D28  20 68 6F  	.db	cP,lH,lO,lN,lE
+       00:7D2B  6E 65     
+  554  00:7D2D  2B        	.db	perid
+  555  00:7D2E  FF        	.db	$FF
+  556                     
+  557  00:7D2F            msg35:	; kurodenha doudesuka?
+  558                     	; This is a Rotary Phone.
+  559                     ;	.db	$07,$47,$6D,$4D,$4B,$29,$4E,$6E
+  560                     ;	.db	$02,$6D,$0C,$05,$8E
+  561                     ;	.db	$FF
+  562  00:7D2F  24 68 69  	.db	cT,lH,lI,lS,spc,lI,lS,spc,lA,spc
+       00:7D32  83 4E 69  
+       00:7D35  83 4E 61  
+       00:7D38  4E        
+  563  00:7D39  22 6F 84  	.db	cR,lO,lT,lA,lR,lY,spc
+       00:7D3C  61 82 89  
+       00:7D3F  4E        
+  564  00:7D40  20 68 6F  	.db	cP,lH,lO,lN,lE
+       00:7D43  6E 65     
+  565  00:7D45  2B        	.db	perid
+  566  00:7D46  FF        	.db	$FF
+  567                     
+  568  00:7D47            msg36:	; keitaidenwaha doudesuka?
+  569                     	; How about a Cellphone ?
+  570                     ;	.db	$08,$01,$0F,$01,$6D,$4D,$4B,$29
+  571                     ;	.db	$4E,$6E,$02,$6D,$0C,$05,$8E
+  572                     ;	.db	$FF
+  573  00:7D47  08 6F 87  	.db	cH,lO,lW,spc,lA,lB,lO,lU,lT,spc,lA,spc
+       00:7D4A  4E 61 62  
+       00:7D4D  6F 85 84  
+       00:7D50  4E 61 4E  
+  574  00:7D53  03 65 6C  	.db	cC,lE,lL,lL,lP,lH,lO,lN,lE
+       00:7D56  6C 80 68  
+       00:7D59  6F 6E 65  
+  575  00:7D5C  4E 8E     	.db	spc,qust
+  576  00:7D5E  FF        	.db	$FF
+  577                     

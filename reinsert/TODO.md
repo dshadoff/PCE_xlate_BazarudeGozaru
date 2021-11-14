@@ -3,6 +3,7 @@
 ## Wrong System Card
 - There is no "wrong system card" screen for this Super CD-ROM, oddly
   It simply goes to a black screen and stays there (on real hardware; Mednafen eventually goes back to the boot screen)
+  Rather, this behaviour is due to a bug.  It has a System card screen it should put up.
 
 ## Choose Files screen
 
