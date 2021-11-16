@@ -73,11 +73,21 @@
 ::
 ..\tools\pce_gfx put tile track2.bin 0x017D400 16 14 4 17D400.new 0 0 ..\xlate\169000.xlate
 ::
+::Controller
+::
+..\tools\pce_gfx put tile track2.bin 0x017C000 16 16 10 17C000.new 0 0 ..\xlate\17C000.xlate
+:: ..\tools\patch track2.bin 0x17E20C 0xE2 0xE3 0x10 0x99 0x8B 0x8B 0x01 0x02 0x8B 0x8B 0x03 0x04 0x8B 0x8E 0x01 0x9A
+::
 :: How to Play initial screen
 ::
 ..\tools\pce_gfx put tile track2.bin 0x0190C00 16 16 8 190C00.new 0 0 ..\xlate\17C000.xlate
 ..\tools\pce_gfx put tile track2.bin 0x0192880 16 4 4 192880.new 0 0 ..\xlate\17C000.xlate
 ..\tools\pce_gfx put tile track2.bin 0x0193000 16 16 6 193000.new 0 0 ..\xlate\17C000.xlate
+::
+:: Alphabets for icon explanation screens
+::
+:: ..\tools\pce_gfx put tile track2.bin 0x0195000 16 16 16 195000.new 0 0 ..\xlate\195000.xlate
+:: ..\tools\pce_gfx put tile track2.bin 0x0197000 16 16 14 197000.new 0 0 ..\xlate\195000.xlate
 
 
 ::

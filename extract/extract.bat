@@ -272,7 +272,7 @@
 ..\tools\pce_gfx get tile track2.bin 0x01EE4C0 16 2 2 1EE4C0.orig 0 0 ..\xlate\17C000.xlate
 ..\tools\pce_gfx get tile track2.bin 0x01F14C0 16 2 2 1F14C0.orig 0 0 ..\xlate\17C000.xlate
 ::
-:: Alphabet for conversation with shop owner
+:: Alphabet for conversation with shop owner (all translated)
 ::
 ..\tools\pce_gfx get tile track2.bin 0x01F4000 16 16 14 1F4000.orig 0 0 ..\xlate\17C000.xlate
 
