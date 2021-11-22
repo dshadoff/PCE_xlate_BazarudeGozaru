@@ -86,7 +86,7 @@
 ::
 :: Alphabets for icon explanation screens
 ::
-:: ..\tools\pce_gfx put tile track2.bin 0x0195000 16 16 16 195000.new 0 0 ..\xlate\195000.xlate
+ ..\tools\pce_gfx put tile track2.bin 0x0195000 16 16 16 195000.new 0 0 ..\xlate\195000.xlate
 :: ..\tools\pce_gfx put tile track2.bin 0x0197000 16 16 14 197000.new 0 0 ..\xlate\195000.xlate
 
 
