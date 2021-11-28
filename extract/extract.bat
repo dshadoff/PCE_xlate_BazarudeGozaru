@@ -281,9 +281,14 @@
 ::
 ..\tools\pce_gfx get tile track2.bin 0x01F7000 16 16 4 1F7000.orig 0 0 ..\xlate\1F7000.xlate
 ::
-..\tools\pce_gfx get tile track2.bin 0x020B040 16 12 10 20B040.orig 0 0 ..\xlate\20B040.xlate
-..\tools\pce_gfx get tile track2.bin 0x0210040 16 14 10 210040.orig 0 0 ..\xlate\210040.xlate
+:: Alphabet for "Now I can relax" end screen:
+..\tools\pce_gfx get tile track2.bin 0x020B000 16 16 10 20B000.orig 0 0 ..\xlate\20B000.xlate
+:: Alphabet for "Nice things all in a row" end screen:
+..\tools\pce_gfx get tile track2.bin 0x0210000 16 16 10 210000.orig 0 0 ..\xlate\210000.xlate
 
+:: Alphabets for credits end screens:
+..\tools\pce_gfx get tile track2.bin 0x0213000 16 16 16 213000.orig 0 0 ..\xlate\213000.xlate
+..\tools\pce_gfx get tile track2.bin 0x0215000 16 16 8 215000.orig 0 0 ..\xlate\215000.xlate
 
 
 
@@ -327,9 +332,6 @@
 
 
 
-..\tools\pce_gfx get tile track2.bin 0x0213000 16 16 16 213000.orig 0 0 ..\xlate\213000.xlate
-..\tools\pce_gfx get tile track2.bin 0x0215000 16 14 2 215000.orig 0 0 ..\xlate\215000.xlate
-..\tools\pce_gfx get tile track2.bin 0x0215C00 16 10 2 215C00.orig 0 0 ..\xlate\215000.xlate
 
 ..\tools\pce_gfx get tile track2.bin 0x0232A00 16 16 4 232A00.orig 0 0 ..\xlate\232A00.xlate
 
