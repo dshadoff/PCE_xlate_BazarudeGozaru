@@ -47,7 +47,7 @@
 ..\tools\pce_gfx get tile track2.bin 0x0182BE0 1 1 1 1829E0.orig 0 8 ..\xlate\1829E0.xlate
 
 ::
-:: Backup File message (not enough space)
+:: Backup File message (not enough space) (translated)
 ::
 ..\tools\pce_gfx get tile track2.bin 0x0169000 16 16 14 169000.orig 0 0 ..\xlate\169000.xlate
 ::
@@ -78,7 +78,7 @@
 ::
 ..\tools\pce_gfx get tile track2.bin 0x017D400 16 14 4 17D400.orig 0 0 ..\xlate\169000.xlate
 ::
-::Controller
+::Controller (translated)
 ::
 ..\tools\pce_gfx get tile track2.bin 0x017C000 16 16 10 17C000.orig 0 0 ..\xlate\17C000.xlate
 ::
@@ -88,7 +88,7 @@
 ..\tools\pce_gfx get tile track2.bin 0x0192880 16 4 4 192880.orig 0 0 ..\xlate\17C000.xlate
 ..\tools\pce_gfx get tile track2.bin 0x0193000 16 16 6 193000.orig 0 0 ..\xlate\17C000.xlate
 ::
-:: Alphabets for icon explanation screens
+:: Alphabets for icon explanation screens (translated)
 ::
 ..\tools\pce_gfx get tile track2.bin 0x0195000 16 16 16 195000.orig 0 0 ..\xlate\195000.xlate
 ..\tools\pce_gfx get tile track2.bin 0x0197000 16 16 14 197000.orig 0 0 ..\xlate\195000.xlate
@@ -281,12 +281,12 @@
 ::
 ..\tools\pce_gfx get tile track2.bin 0x01F7000 16 16 4 1F7000.orig 0 0 ..\xlate\1F7000.xlate
 ::
-:: Alphabet for "Now I can relax" end screen:
+:: Alphabet for "Now I can relax" end screen: (translated)
 ..\tools\pce_gfx get tile track2.bin 0x020B000 16 16 10 20B000.orig 0 0 ..\xlate\20B000.xlate
-:: Alphabet for "Nice things all in a row" end screen:
+:: Alphabet for "Nice things all in a row" end screen: (translated)
 ..\tools\pce_gfx get tile track2.bin 0x0210000 16 16 10 210000.orig 0 0 ..\xlate\210000.xlate
 
-:: Alphabets for credits end screens:
+:: Alphabets for credits end screens: (translated)
 ..\tools\pce_gfx get tile track2.bin 0x0213000 16 16 16 213000.orig 0 0 ..\xlate\213000.xlate
 ..\tools\pce_gfx get tile track2.bin 0x0215000 16 16 8 215000.orig 0 0 ..\xlate\215000.xlate
 
