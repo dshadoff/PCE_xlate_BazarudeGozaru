@@ -160,6 +160,11 @@
 ::
 :::: IN_GAME
 ::
+:: Start de Gozaru, Goal de Gozaru
+..\tools\pce_gfx get sprite track2.bin 0x011D800 2 2 6 11D800.orig 0 0 ..\xlate\117000.xlate
+..\tools\pce_gfx get sprite track2.bin 0x011E000 2 2 6 11D800.orig 32 0 ..\xlate\117000.xlate
+..\tools\pce_gfx get sprite track2.bin 0x011E800 2 2 6 11D800.orig 64 0 ..\xlate\117000.xlate
+::
 :: STAGE (top right corner) (translated)
 ::
 ..\tools\pce_gfx get sprite track2.bin 0x0111300 2 2 1 111300.orig 0 0 ..\xlate\113000.xlate
@@ -360,9 +365,7 @@
 ..\tools\pce_gfx get sprite track2.bin 0x0117000 2 2 12 117000.orig 0 0 ..\xlate\117000.xlate
 ..\tools\pce_gfx get sprite track2.bin 0x0117C00 2 2 6 117C00.orig 0 0 ..\xlate\117000.xlate
 ..\tools\pce_gfx get sprite track2.bin 0x0118200 2 2 14 118200.orig 0 0 ..\xlate\117000.xlate
-..\tools\pce_gfx get sprite track2.bin 0x011D800 2 2 6 11D800.orig 0 0 ..\xlate\117000.xlate
-..\tools\pce_gfx get sprite track2.bin 0x011E000 2 2 6 11E000.orig 0 0 ..\xlate\117000.xlate
-..\tools\pce_gfx get sprite track2.bin 0x011E800 2 2 6 11E800.orig 0 0 ..\xlate\117000.xlate
+
 ..\tools\pce_gfx get sprite track2.bin 0x0157A00 2 2 6 157A00.orig 0 0 ..\xlate\157A00.xlate
 ..\tools\pce_gfx get sprite track2.bin 0x0158200 2 2 6 158200.orig 0 0 ..\xlate\157A00.xlate
 
