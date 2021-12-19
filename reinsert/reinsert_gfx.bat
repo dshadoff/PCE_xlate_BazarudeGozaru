@@ -263,6 +263,74 @@
 ::
 :::: IN-GAME
 ::
+:: Start de Gozaru, Goal de Gozaru
+..\tools\pce_gfx put sprite track2.bin 0x011D800 2 2 6 11D800.new 0 0 ..\xlate\117000.xlate
+..\tools\pce_gfx put sprite track2.bin 0x011E000 2 2 6 11D800.new 32 0 ..\xlate\117000.xlate
+..\tools\pce_gfx put sprite track2.bin 0x011E800 2 2 6 11D800.new 64 0 ..\xlate\117000.xlate
+:: Adjust sprites for "START"
+..\tools\patch track2.bin 0x019CCC 0x08
+..\tools\patch track2.bin 0x019CD0 0x31 0x39 0x00
+:: Adjust sprites for "GOAL"
+..\tools\patch track2.bin 0x019CB3 0x10 0x19 0x0C
+..\tools\patch track2.bin 0x019CB6 0x21 0x39 0x0C
+..\tools\patch track2.bin 0x019CB9 0x30 0x59 0x0C
+:: Adjust sprites for "De Gozaru"
+..\tools\patch track2.bin 0x019CDB 0x18 0xC9 0x00
+..\tools\patch track2.bin 0x019CDE 0x18 0xA9 0x00
+..\tools\patch track2.bin 0x019CE1 0x18 0x99 0x00
+..\tools\patch track2.bin 0x019CE4 0x18 0x09 0x00
+::
+:: Bazaru de Gozaru (did not succeed)
+..\tools\pce_gfx put sprite track2.bin 0x0118200 2 2 14 118200.new 0 0 ..\xlate\117000.xlate
+..\tools\patch track2.bin 0x019CF5 0x24 0x0C 0x0C
+..\tools\patch track2.bin 0x019CF8 0x00 0x0D 0x00
+..\tools\patch track2.bin 0x019CFE 0x00 0x9A 0x00
+..\tools\patch track2.bin 0x019D01 0x00 0xC0 0x00
+..\tools\patch track2.bin 0x019D04 0x00 0xA0 0x00
+..\tools\patch track2.bin 0x019D07 0x00 0x01 0x00
+..\tools\patch track2.bin 0x019D0A 0x00 0x11 0x00
+..\tools\patch track2.bin 0x019D0D 0x00 0x20 0x00
+::
+:: Continue (tsuzukeru or yarinaosu) with yes/no selection
+..\tools\pce_gfx put sprite track2.bin 0x0117000 2 2 12 117000.new 0 0 ..\xlate\117000.xlate
+..\tools\pce_gfx put sprite track2.bin 0x0117C00 2 2 6 117C00.new 0 0 ..\xlate\117000.xlate
+:: fix sprite group definition for "tsuzukeru"/"again":
+..\tools\patch track2.bin 0x019C30 0x01 0x09 0x00
+..\tools\patch track2.bin 0x019C33 0x1C 0x19 0x00
+..\tools\patch track2.bin 0x019C36 0x01 0x29 0x00
+..\tools\patch track2.bin 0x019C39 0x1E 0x39 0x00
+..\tools\patch track2.bin 0x019C3C 0x11 0x49 0x00
+..\tools\patch track2.bin 0x019C3F 0x03 0x59 0x00
+..\tools\patch track2.bin 0x019C42 0x00 0x69 0x00
+:: fix sprite group definition for "goza-ru"/"start":
+..\tools\patch track2.bin 0x019C4D 0x1D 0xEA 0x00
+..\tools\patch track2.bin 0x019C50 0x1F 0xDA 0x00
+..\tools\patch track2.bin 0x019C53 0x01 0xCA 0x00
+..\tools\patch track2.bin 0x019C56 0x08 0xBA 0x00
+..\tools\patch track2.bin 0x019C59 0x1F 0xAA 0x00
+..\tools\patch track2.bin 0x019C5C 0x00 0x9A 0x00
+..\tools\patch track2.bin 0x019C5F 0x00 0x9A 0x00
+:: fix sprite group definition for "yarinaosu"/"over":
+..\tools\patch track2.bin 0x019C96 0x02 0x09 0x00
+..\tools\patch track2.bin 0x019C99 0x06 0x19 0x00
+..\tools\patch track2.bin 0x019C9C 0x0A 0x29 0x00
+..\tools\patch track2.bin 0x019C9F 0x08 0x39 0x00
+..\tools\patch track2.bin 0x019CA2 0x03 0x49 0x00
+..\tools\patch track2.bin 0x019CA5 0x00 0x59 0x00
+..\tools\patch track2.bin 0x019CA8 0x00 0x69 0x00
+
+..\tools\pce_gfx put sprite track2.bin 0x0117280 1 1 1 117280.new 0 0 ..\xlate\117000.xlate
+..\tools\pce_gfx put sprite track2.bin 0x0117380 1 1 1 117280.new 16 0 ..\xlate\117000.xlate
+..\tools\pce_gfx put sprite track2.bin 0x0117480 1 1 1 117280.new 32 0 ..\xlate\117000.xlate
+..\tools\pce_gfx put sprite track2.bin 0x0117580 1 1 1 117280.new 48 0 ..\xlate\117000.xlate
+..\tools\pce_gfx put sprite track2.bin 0x0117680 1 1 1 117280.new 64 0 ..\xlate\117000.xlate
+..\tools\pce_gfx put sprite track2.bin 0x0117780 1 1 1 117280.new 0 16 ..\xlate\117000.xlate
+..\tools\pce_gfx put sprite track2.bin 0x0117800 1 1 1 117280.new 16 16 ..\xlate\117000.xlate
+..\tools\pce_gfx put sprite track2.bin 0x0117900 1 1 1 117280.new 32 16 ..\xlate\117000.xlate
+..\tools\pce_gfx put sprite track2.bin 0x0117A00 1 1 1 117280.new 48 16 ..\xlate\117000.xlate
+..\tools\pce_gfx put sprite track2.bin 0x0117B00 1 1 1 117280.new 64 16 ..\xlate\117000.xlate
+..\tools\patch track2.bin 0x019C88 0x0D 0x00 0x00
+
 :: STAGE (top right corner)
 ::
 ..\tools\pce_gfx put sprite track2.bin 0x0111300 2 2 1 111300.new 0 0 ..\xlate\113000.xlate

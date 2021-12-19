@@ -160,10 +160,28 @@
 ::
 :::: IN_GAME
 ::
-:: Start de Gozaru, Goal de Gozaru
+:: Start de Gozaru, Goal de Gozaru (translated)
 ..\tools\pce_gfx get sprite track2.bin 0x011D800 2 2 6 11D800.orig 0 0 ..\xlate\117000.xlate
 ..\tools\pce_gfx get sprite track2.bin 0x011E000 2 2 6 11D800.orig 32 0 ..\xlate\117000.xlate
 ..\tools\pce_gfx get sprite track2.bin 0x011E800 2 2 6 11D800.orig 64 0 ..\xlate\117000.xlate
+::
+:: Bazaru de Gozaru (did not succeed)  (translated)
+..\tools\pce_gfx get sprite track2.bin 0x0118200 2 2 14 118200.orig 0 0 ..\xlate\117000.xlate
+::
+:: Continue (tsuzukeru or yarinaosu) with yes/no selection (translated)
+..\tools\pce_gfx get sprite track2.bin 0x0117000 2 2 12 117000.orig 0 0 ..\xlate\117000.xlate
+..\tools\pce_gfx get sprite track2.bin 0x0117C00 2 2 6 117C00.orig 0 0 ..\xlate\117000.xlate
+
+..\tools\pce_gfx get sprite track2.bin 0x0117280 1 1 1 117280.orig 0 0 ..\xlate\117000.xlate
+..\tools\pce_gfx get sprite track2.bin 0x0117380 1 1 1 117280.orig 16 0 ..\xlate\117000.xlate
+..\tools\pce_gfx get sprite track2.bin 0x0117480 1 1 1 117280.orig 32 0 ..\xlate\117000.xlate
+..\tools\pce_gfx get sprite track2.bin 0x0117580 1 1 1 117280.orig 48 0 ..\xlate\117000.xlate
+..\tools\pce_gfx get sprite track2.bin 0x0117680 1 1 1 117280.orig 64 0 ..\xlate\117000.xlate
+..\tools\pce_gfx get sprite track2.bin 0x0117780 1 1 1 117280.orig 0 16 ..\xlate\117000.xlate
+..\tools\pce_gfx get sprite track2.bin 0x0117800 1 1 1 117280.orig 16 16 ..\xlate\117000.xlate
+..\tools\pce_gfx get sprite track2.bin 0x0117900 1 1 1 117280.orig 32 16 ..\xlate\117000.xlate
+..\tools\pce_gfx get sprite track2.bin 0x0117A00 1 1 1 117280.orig 48 16 ..\xlate\117000.xlate
+..\tools\pce_gfx get sprite track2.bin 0x0117B00 1 1 1 117280.orig 64 16 ..\xlate\117000.xlate
 ::
 :: STAGE (top right corner) (translated)
 ::
@@ -362,9 +380,6 @@
 
 ..\tools\pce_gfx get sprite track2.bin 0x00A6800 2 2 12 0A6800.orig 0 0 ..\xlate\0A6800.xlate
 ..\tools\pce_gfx get sprite track2.bin 0x00B6180 2 1 1 0B6180.orig 0 0 ..\xlate\0B6180.xlate
-..\tools\pce_gfx get sprite track2.bin 0x0117000 2 2 12 117000.orig 0 0 ..\xlate\117000.xlate
-..\tools\pce_gfx get sprite track2.bin 0x0117C00 2 2 6 117C00.orig 0 0 ..\xlate\117000.xlate
-..\tools\pce_gfx get sprite track2.bin 0x0118200 2 2 14 118200.orig 0 0 ..\xlate\117000.xlate
 
 ..\tools\pce_gfx get sprite track2.bin 0x0157A00 2 2 6 157A00.orig 0 0 ..\xlate\157A00.xlate
 ..\tools\pce_gfx get sprite track2.bin 0x0158200 2 2 6 158200.orig 0 0 ..\xlate\157A00.xlate
