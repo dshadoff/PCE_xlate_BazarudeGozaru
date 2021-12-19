@@ -5,20 +5,6 @@
   It simply goes to a black screen and stays there (on real hardware; Mednafen eventually goes back to the boot screen)
   Rather, this behaviour is due to a bug.  It has a System card screen it should put up.
 
-## Choose Files screen
-
-- Backup RAM full (16900)
-
-## World Map
-
-
-## AREA Map
-
-## IN-GAME
-
-- Scrolling "Win"/"Lose" banners
-- Names of levels at time of level completion
-
 ## Shop
 
 - conversation between shop owner and Bazaru
@@ -48,19 +34,6 @@ There is a list of strings on disk for these phrases:
   PA/PI/PU/PE/PO     = 84/85/86/87/88 
   -/xya/xyu/xyo/xtsu = 89/8A/8B/8C/8D
   ?/!                = 8E/8F
-
-## Help Screens
-
-- Everything
-Screen 1 190C00 & 192880 & 193000 - done
-
-Screen 2 :
-Screen 3 : icons (heading done)
-
-## Bazaru's House
-
-- Heading of his house - done
-
 
 ## Miscellaneous
 
