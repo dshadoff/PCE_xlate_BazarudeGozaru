@@ -9,7 +9,8 @@ programs (or art in general), but am comfortable with text editors.
 
 
 Example ASCII characters used for contrast:
+```
 Dark characters:   # *
 Medium characters: : | ~
 Light characters:  , .
-
+```
