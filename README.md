@@ -45,19 +45,20 @@ A few technical notes can be found in the "TECHNICAL.md" file in this folder.
 
 The work broke down roughly as follows:
 
-Dave Shadoff:
+**Dave Shadoff:**
  - Identfication/Extraction of items to be translated
  - Tool Creation
  - Decode/Recode Sprite, Text, and background graphic encoding systems
  - Translation
  - Minor artwork
 
-Diogo Ribeiro:
+**Diogo Ribeiro:**
  - Fonts
  - Artwork (anything thicker than 1 pixel)
  - Testing
 
-MooZ:
+**MooZ:**
  - Miscellaneous Support
  - Testing
 
+We all hope that you enjoy the translation.
