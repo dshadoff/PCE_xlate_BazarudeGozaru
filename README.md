@@ -1,7 +1,7 @@
 # PCE_xlate_BazarudeGozaru
 
 This repository holds the information used during the creation of the translation patch
-for the PC Engine game Bazaru de Gozaru
+for the PC Engine game Bazaru de Gozaru.
 
 ## About the Game
 
@@ -9,10 +9,13 @@ Bazaru de Gozaru was a game released on the PC Engine console, in Super CDROM fo
 It features a monkey, who needs to be guided by the player through various puzzles.
 Along the way, there are opportunities to purchase home furnishings for Bazaru (the monkey).
 
+While the monkey's Japanese name is "Bazaru de Gozaru", the English name has been indicated by NEC
+to be "Bazar de Gozarre" (with an accent over the 'e' in 'de'). But I will refer to the money as "Bazaru".
+
 ## About the Translation
 
 The items for translation in this game are primarily icons, signs and graphical representations
-of, rather than text itself.  As such, it is more suited to a person with some level of artistic
+of text, rather than text itself.  As such, it is more suited to a person with some level of artistic
 skill... unlike myself.
 
 I started this translation in roughly May of 2005, creating some rudimentary tools
@@ -27,7 +30,7 @@ became interested in performing translations.
 ## About the Repository
 
 This contains all the materials created/needed during the translation.
- - There is a walkthrough (which you shouldn't use)
+ - There is a walkthrough (which you shouldn't use, because you will miss out on the fun)
  - There are also Test_BRAM files, which were used in order to jump to certain portions
 of the game for test purposes.
 
@@ -41,10 +44,11 @@ A few technical notes can be found in the "TECHNICAL.md" file in this folder.
 ## About the Team
 
 The work broke down roughly as follows:
+
 Dave Shadoff:
  - Identfication/Extraction of items to be translated
  - Tool Creation
- - Decode/Recode Sprite, Text, and backgroun graphic encoding systems
+ - Decode/Recode Sprite, Text, and background graphic encoding systems
  - Translation
  - Minor artwork
 
